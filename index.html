@@ -104,6 +104,14 @@ input.tname:focus { border-color: var(--accent); }
 .verdict.ok { background: #123d24; color: #4ade80; }
 .verdict.bad { background: #43121d; color: #ff5c78; }
 
+.fchips { display: flex; flex-wrap: wrap; gap: 6px; }
+.fchip { border: 2px solid #3a3355; background: var(--panel2); color: var(--muted); border-radius: 20px;
+  padding: 6px 11px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.fchip.on { border-color: var(--accent); color: var(--text); background: #3a1f33; }
+.fchip small { opacity: .6; font-size: 10.5px; }
+.fchips-actions { display: flex; gap: 6px; margin-bottom: 8px; }
+.tagline { margin-top: 6px; font-size: 12px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+
 /* Timeline */
 .tl-section { margin-top: 16px; }
 .tl-head { font-size: 13px; font-weight: 800; color: var(--tc); margin-bottom: 8px; display:flex; justify-content: space-between; }
@@ -145,20 +153,16 @@ code.uri { display:block; background: var(--panel2); border-radius: 10px; paddin
 <div class="wrap" id="app"></div>
 <script>
 "use strict";
-/* ================= KONSTANTEN / STORAGE ================= */
-const GH_REPO = "EineAnnanas/hitster";
-const LS_GAME = "hk-v2-game", LS_BEST = "hk-pwa-best", LS_AUTH = "hk-pwa-auth", LS_CID = "hk-pwa-clientid";
-const LS_SEL = "hk-v2-sel", LS_GHTOKEN = "hk-v2-ghtoken", LS_PENDING = "hk-v2-pending";
+/* ================= KONSTANTEN ================= */
+const LS_GAME = "hk-v3-game", LS_BEST = "hk-pwa-best", LS_AUTH = "hk-pwa-auth", LS_CID = "hk-pwa-clientid", LS_FILT = "hk-v3-filt";
 const SCOPES = "user-modify-playback-state user-read-playback-state";
 const COLORS = ["#ff3e8a","#38d0ff","#a3e635","#ffb02e","#b78bff","#ff6a4d"];
+const EPOCHS = ["Barock","Klassik","Romantik","Moderne","Zeitgenössisch"];
 
-let DATA = null;          // Inhalt von lists.json
-let POOLS = {};           // Pool-Dateien
-let S = null;             // Spielzustand
+let SONGS = [];
+let S = null;
 let screen = 'home';
 let playState = { playing: false, error: '' };
-let dirty = false;        // ungespeicherte Listen-Änderungen
-let syncMsg = '';
 
 try { const s = localStorage.getItem(LS_GAME); if (s) S = JSON.parse(s); } catch(e){}
 function save(){ try { localStorage.setItem(LS_GAME, JSON.stringify(S)); } catch(e){} }
@@ -166,75 +170,30 @@ function esc(s){ return String(s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;
 const app = document.getElementById('app');
 const $ = id => document.getElementById(id);
 function skey(s){ return (s.t + '|' + s.c).toLowerCase(); }
+function era(y){ return y < 1750 ? "Barock" : y < 1820 ? "Klassik" : y < 1900 ? "Romantik" : y < 1950 ? "Moderne" : "Zeitgenössisch"; }
 
-/* ================= DATEN LADEN ================= */
+/* ================= DATEN + FILTER ================= */
 async function loadData(){
   try {
-    const pending = localStorage.getItem(LS_PENDING);
-    if (pending) { DATA = JSON.parse(pending); dirty = true; }
-    else {
-      const r = await fetch('lists.json?v=' + Date.now());
-      DATA = await r.json();
-    }
-    for (const l of DATA.lists) {
-      if (l.pool && !POOLS[l.pool]) {
-        try { const rp = await fetch(l.pool + '?v=' + Date.now()); POOLS[l.pool] = await rp.json(); }
-        catch(e){ POOLS[l.pool] = []; }
-      }
-    }
-  } catch(e) { DATA = { lists: [] }; }
+    const r = await fetch('songs.json?v=' + Date.now());
+    SONGS = await r.json();
+  } catch(e) { SONGS = []; }
 }
-function listSongs(l){
-  if (l.songs) return l.songs;
-  const pool = POOLS[l.pool] || [];
-  return (l.accIdx || []).map(i => pool[i]).filter(Boolean);
+function allComposers(){ return [...new Set(SONGS.map(s => s.c))].sort((a,b)=>a.localeCompare(b,'de')); }
+function allGenres(){ return [...new Set(SONGS.map(s => s.g))].sort((a,b)=>a.localeCompare(b,'de')); }
+// Filter: null = alle ausgewählt
+let FILT = { c: null, g: null, e: null };
+try { const f = JSON.parse(localStorage.getItem(LS_FILT)); if (f) FILT = f; } catch(e){}
+function saveFilt(){ try { localStorage.setItem(LS_FILT, JSON.stringify(FILT)); } catch(e){} }
+function filterMatch(s){
+  if (FILT.c && !FILT.c.includes(s.c)) return false;
+  if (FILT.g && !FILT.g.includes(s.g)) return false;
+  if (FILT.e && !FILT.e.includes(era(s.y))) return false;
+  return true;
 }
-function playable(l){ return listSongs(l).filter(s => s.u); }
-function getList(id){ return DATA.lists.find(l => l.id === id); }
-function selection(){
-  try {
-    const s = JSON.parse(localStorage.getItem(LS_SEL));
-    const valid = (s || []).filter(id => getList(id));
-    if (valid.length) return valid;
-  } catch(e){}
-  return DATA.lists.length ? [DATA.lists[0].id] : [];
-}
-function setSelection(ids){ try { localStorage.setItem(LS_SEL, JSON.stringify(ids)); } catch(e){} }
-function unionPlayable(ids){
-  const out = []; const seen = new Set();
-  for (const id of ids) {
-    const l = getList(id); if (!l) continue;
-    for (const s of playable(l)) { const k = skey(s); if (!seen.has(k)) { seen.add(k); out.push(s); } }
-  }
-  return out;
-}
-function markDirty(){
-  dirty = true;
-  try { localStorage.setItem(LS_PENDING, JSON.stringify(DATA)); } catch(e){}
-}
+function filteredSongs(){ return SONGS.filter(s => s.u && filterMatch(s)); }
 
-/* ================= GITHUB SYNC ================= */
-function ghToken(){ return localStorage.getItem(LS_GHTOKEN) || ''; }
-async function pushLists(silent){
-  const tok = ghToken();
-  if (!tok) { if (!silent) { syncMsg = 'Kein GitHub-Token hinterlegt (Einstellungen). Änderungen bleiben nur lokal.'; render(); } return false; }
-  syncMsg = 'Speichere auf GitHub…'; if (!silent) render();
-  try {
-    const url = 'https://api.github.com/repos/' + GH_REPO + '/contents/lists.json';
-    const h = { 'Authorization': 'Bearer ' + tok, 'Accept': 'application/vnd.github+json' };
-    const g = await fetch(url, { headers: h });
-    const sha = g.ok ? (await g.json()).sha : undefined;
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(DATA))));
-    const r = await fetch(url, { method: 'PUT', headers: h,
-      body: JSON.stringify({ message: 'Listen-Update aus der App', content, sha }) });
-    if (!r.ok) throw new Error(r.status);
-    dirty = false;
-    try { localStorage.removeItem(LS_PENDING); } catch(e){}
-    syncMsg = 'Auf GitHub gespeichert.';
-  } catch(e) { syncMsg = 'Speichern fehlgeschlagen – Token prüfen (Repo-Schreibrecht nötig).'; }
-  render();
-  return !dirty;
-}
+/* ================= GITHUB entfernt – Songs kommen read-only aus songs.json ================= */
 
 /* ================= SPOTIFY AUTH (PKCE) ================= */
 function getAuth(){ try { return JSON.parse(localStorage.getItem(LS_AUTH)) || null; } catch(e){ return null; } }
@@ -331,7 +290,7 @@ async function pauseResume(){
 async function skipFwd(){ try { const st = await api('/me/player'); const pos = (st && st.progress_ms) || 0; await api('/me/player/seek?position_ms=' + (pos + 20000), 'PUT'); } catch(e){} }
 async function stopPlayback(){ try { await api('/me/player/pause','PUT'); } catch(e){} playState.playing = false; }
 
-/* ================= NAV / HELFER ================= */
+/* ================= NAV ================= */
 function go(s){ screen = s; render(); }
 function best(){ try { return parseInt(localStorage.getItem(LS_BEST)) || 0; } catch(e){ return 0; } }
 function setBest(n){ try { localStorage.setItem(LS_BEST, n); } catch(e){} }
@@ -341,7 +300,6 @@ function shuffle(a){ for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.ran
 function renderHome(){
   const a = connected();
   const running = S && S.phase && S.phase !== 'gameover';
-  const listCount = DATA.lists.length;
   app.innerHTML =
     '<h1>HITSTER <span class="neon">KLASSIK</span></h1>' +
     (running ? '<button class="bigbtn" onclick="go(\'game\')">Laufendes Spiel fortsetzen</button>' : '') +
@@ -351,37 +309,56 @@ function renderHome(){
       '<div class="tx"><b>Solo · Klassisch</b><span>Ziel-Kartenzahl erreichen</span></div></div>' +
     '<div class="mode" onclick="go(\'setup-party\')"><div class="ic" style="background:linear-gradient(135deg,#a3e635,#22b573)">2+</div>' +
       '<div class="tx"><b>Party</b><span>2–6 Teams an einem Gerät, mit Anzweifeln</span></div></div>' +
-    '<div class="mode" onclick="go(\'lists\')"><div class="ic" style="background:linear-gradient(135deg,#b78bff,#7a3eff)">L</div>' +
-      '<div class="tx"><b>Listen und Swipen</b><span>'+listCount+' Listen'+(dirty?' – ungespeicherte Änderungen':'')+' – neue Songs entdecken</span></div></div>' +
     '<div class="spotify-chip" onclick="go(\'settings\')"><div class="st '+(a?'on':'off')+'"></div>' +
       (a ? '<span>Spotify verbunden</span><span class="lbl2">– Songs starten automatisch</span>'
          : '<span>Spotify nicht verbunden</span><span class="lbl2">– einrichten für Auto-Playback</span>') + '</div>';
 }
 
-/* ================= LISTEN-AUSWAHL (Spielstart) ================= */
-function listChecksHtml(){
-  const sel = selection();
-  return '<label class="lbl">Karten-Listen (mehrere möglich)</label>' + DATA.lists.map(l => {
-    const p = playable(l).length; const total = listSongs(l).length;
-    const on = sel.includes(l.id);
-    return '<div class="mode" style="margin-top:8px;padding:11px 14px;'+(on?'border-color:var(--accent)':'')+'" onclick="toggleSel(\''+l.id+'\')">' +
-      '<div class="tx" style="flex:1"><b>'+(on?'[x] ':'[ ] ')+esc(l.name)+'</b><span>'+p+' spielbare Karten'+(total>p?' ('+(total-p)+' ohne Link)':'')+'</span></div></div>';
-  }).join('') + '<p class="hint">Auswahl: '+unionPlayable(sel).length+' Karten im Stapel</p>';
+/* ================= FILTER-UI ================= */
+function chip(dim, val, label, count){
+  const arr = FILT[dim];
+  const on = !arr || arr.includes(val);
+  return '<button class="fchip '+(on?'on':'')+'" onclick="toggleFilt(\''+dim+'\',\''+esc(val).replace(/'/g,"\\'")+'\')">'+esc(label)+' <small>'+count+'</small></button>';
 }
-function toggleSel(id){
-  let sel = selection();
-  if (sel.includes(id)) sel = sel.filter(x => x !== id);
-  else sel.push(id);
-  if (!sel.length) sel = [id];
-  setSelection(sel); render();
+function filterSection(title, dim, values, counts){
+  const arr = FILT[dim];
+  const activeInfo = arr ? arr.length + ' von ' + values.length : 'alle';
+  let h = '<details class="ot" style="--tc:#b78bff;margin-top:10px"'+(arr?' open':'')+'><summary><span>'+title+'</span><span>'+activeInfo+'</span></summary>' +
+    '<div style="padding:8px 12px 12px">' +
+    '<div class="fchips-actions"><button class="menu-btn" onclick="filtAll(\''+dim+'\')">Alle</button>' +
+    '<button class="menu-btn" onclick="filtNone(\''+dim+'\')">Keine</button></div>' +
+    '<div class="fchips">' + values.map(v => chip(dim, v, v, counts[v] || 0)).join('') + '</div></div></details>';
+  return h;
 }
+function filterHtml(){
+  const cc = {}, gc = {}, ec = {};
+  for (const s of SONGS) { if (!s.u) continue; cc[s.c]=(cc[s.c]||0)+1; gc[s.g]=(gc[s.g]||0)+1; const e=era(s.y); ec[e]=(ec[e]||0)+1; }
+  const n = filteredSongs().length;
+  return '<label class="lbl">Kartenfilter</label>' +
+    filterSection('Gattungen', 'g', allGenres(), gc) +
+    filterSection('Epochen', 'e', EPOCHS.filter(e=>ec[e]), ec) +
+    filterSection('Komponisten', 'c', allComposers(), cc) +
+    '<p class="hint" style="margin-top:10px"><b style="color:var(--text)">'+n+' Karten</b> im Stapel</p>';
+}
+function toggleFilt(dim, val){
+  const all = dim==='c' ? allComposers() : dim==='g' ? allGenres() : EPOCHS;
+  let arr = FILT[dim] ? FILT[dim].slice() : all.slice();
+  if (arr.includes(val)) arr = arr.filter(x => x !== val);
+  else arr.push(val);
+  FILT[dim] = (arr.length >= all.length) ? null : arr;
+  saveFilt(); render();
+}
+function filtAll(dim){ FILT[dim] = null; saveFilt(); render(); }
+function filtNone(dim){ FILT[dim] = []; saveFilt(); render(); }
+
+/* ================= SETUP ================= */
 function renderSetupEndless(){
-  app.innerHTML = '<h1>Solo · <span class="neon">Endlos</span></h1><div class="card-panel">' + listChecksHtml() +
+  app.innerHTML = '<h1>Solo · <span class="neon">Endlos</span></h1><div class="card-panel">' + filterHtml() +
     '<button class="bigbtn" onclick="startEndless()">Los</button>' +
     '<button class="bigbtn ghost" onclick="go(\'home\')">Zurück</button></div>';
 }
 function renderSetupClassic(){
-  app.innerHTML = '<h1>Solo · <span class="neon">Klassisch</span></h1><div class="card-panel">' + listChecksHtml() +
+  app.innerHTML = '<h1>Solo · <span class="neon">Klassisch</span></h1><div class="card-panel">' + filterHtml() +
     '<label class="lbl">Karten zum Sieg</label>' +
     '<input class="tname" id="targetIn" type="number" min="1" max="60" value="10" style="max-width:120px">' +
     '<button class="bigbtn" onclick="startClassic()">Los</button>' +
@@ -392,7 +369,7 @@ function renderSetupParty(){
   let names = '';
   for (let i = 0; i < setupTeams; i++) names += '<div class="trow"><span class="dot" style="background:'+COLORS[i]+'"></span>' +
     '<input class="tname" id="tn'+i+'" maxlength="18" value="Team '+(i+1)+'"></div>';
-  app.innerHTML = '<h1>Party<span class="neon">-Modus</span></h1><div class="card-panel">' + listChecksHtml() +
+  app.innerHTML = '<h1>Party<span class="neon">-Modus</span></h1><div class="card-panel">' + filterHtml() +
     '<label class="lbl">Teams</label>' +
     '<div class="teamcount">' + [2,3,4,5,6].map(n => '<button class="'+(n===setupTeams?'sel':'')+'" onclick="setTeams('+n+')">'+n+'</button>').join('') + '</div>' +
     '<label class="lbl">Teamnamen</label>' + names +
@@ -403,8 +380,8 @@ function renderSetupParty(){
 }
 function setTeams(n){ setupTeams = n; renderSetupParty(); }
 function baseGame(teams, mode, target, lives){
-  const pool = unionPlayable(selection());
-  if (pool.length < teams.length + 5) { alert('Die gewählten Listen haben zusammen nur '+pool.length+' spielbare Karten. Mindestens '+(teams.length+5)+' nötig.'); return; }
+  const pool = filteredSongs();
+  if (pool.length < teams.length + 5) { alert('Der Filter lässt nur '+pool.length+' Karten übrig. Mindestens '+(teams.length+5)+' nötig – Filter lockern.'); return; }
   const deck = shuffle(pool.slice());
   for (const t of teams) t.cards.push(deck.pop());
   for (const t of teams) t.cards.sort((a,b)=>a.y-b.y);
@@ -427,13 +404,10 @@ function startParty(){
   baseGame(teams, 'party', t, null);
 }
 
-/* ================= SPIEL ================= */
+/* ================= SPIEL-RENDER ================= */
 function render(){
-  if (!DATA) return;
   if (screen === 'home') { renderHome(); return; }
   if (screen === 'settings') { renderSettings(); return; }
-  if (screen === 'lists') { renderLists(); return; }
-  if (screen === 'swipe') { renderSwipe(); return; }
   if (screen === 'setup-endless') { renderSetupEndless(); return; }
   if (screen === 'setup-classic') { renderSetupClassic(); return; }
   if (screen === 'setup-party') { renderSetupParty(); return; }
@@ -496,6 +470,7 @@ function render(){
     const ok = S.resultOk;
     html += '<div class="songcard"><div class="reveal-year" style="color:'+placer.color+'">'+song.y+'</div>' +
       '<div class="reveal-title">'+esc(song.t)+'</div><div class="reveal-comp">'+esc(song.c)+'</div>' +
+      '<div class="tagline">'+esc(song.g)+' · '+era(song.y)+'</div>' +
       '<div class="verdict '+(ok?'ok':'bad')+'">'+(ok?'Richtig eingeordnet':'Leider falsch')+'</div></div>';
     html += '<div class="actions">';
     if (ok) {
@@ -640,128 +615,22 @@ function renderGameover(){
 function quitGame(){ if (confirm('Zurück ins Menü? Das Spiel bleibt gespeichert.')) { stopPlayback(); go('home'); } }
 function quitToHome(){ S = null; try { localStorage.removeItem(LS_GAME); } catch(e){} go('home'); }
 
-/* ================= LISTEN ================= */
-function renderLists(){
-  let html = '<h1>Listen<span class="neon"> und Swipen</span></h1><div class="card-panel" style="padding-top:6px">';
-  for (const l of DATA.lists) {
-    const total = listSongs(l).length, p = playable(l).length;
-    const poolInfo = l.pool ? ' · Pool: ' + ((POOLS[l.pool]||[]).length) + ' Vorschläge' : '';
-    html += '<div class="mode" style="margin-top:8px;padding:11px 14px">' +
-      '<div class="tx" style="flex:1"><b>'+esc(l.name)+'</b><span>'+total+' Songs, '+p+' spielbar'+poolInfo+'</span></div>' +
-      (l.pool ? '<button class="menu-btn" onclick="startSwipe(\''+l.id+'\')">Swipen</button>' : '') +
-      (l.id !== 'basis' ? '<button class="menu-btn" onclick="deleteList(\''+l.id+'\')">Löschen</button>' : '') + '</div>';
-  }
-  html += '<label class="lbl">Neue Liste</label>' +
-    '<input class="tname" id="newlist" placeholder="Name, z.B. Klavierkonzerte" maxlength="24">' +
-    '<button class="bigbtn ghost" onclick="createList()">Leere Liste anlegen</button>' +
-    (dirty ? '<button class="bigbtn green" onclick="pushLists(false)">Auf GitHub speichern</button>' : '') +
-    (syncMsg ? '<p class="hint">'+esc(syncMsg)+'</p>' : '') +
-    '<button class="bigbtn ghost" onclick="go(\'home\')">Zurück</button></div>' +
-    '<p class="hint">Listen liegen in lists.json im GitHub-Repo. Zum Speichern brauchst du einmalig ein GitHub-Token (Einstellungen). Songs ohne Spotify-Link zählen nicht in den Spielstapel – sag Claude Bescheid, dann werden die Links für deine angenommenen Songs ergänzt.</p>';
-  app.innerHTML = html;
-}
-function createList(){
-  const name = ($('newlist').value || '').trim();
-  if (!name) { alert('Bitte einen Namen eingeben.'); return; }
-  DATA.lists.push({ id: 'l' + Date.now(), name, songs: [] });
-  markDirty(); render();
-}
-function deleteList(id){
-  if (!confirm('Liste wirklich löschen?')) return;
-  DATA.lists = DATA.lists.filter(l => l.id !== id);
-  setSelection(selection().filter(x => x !== id));
-  markDirty(); render();
-}
-
-/* ================= SWIPE ================= */
-let swipeListId = null, swipeHist = [];
-function startSwipe(id){ swipeListId = id; swipeHist = []; screen = 'swipe'; render(); }
-function swipeCandidateIdx(l){
-  const pool = POOLS[l.pool] || [];
-  const done = new Set((l.accIdx||[]).concat(l.rejIdx||[]));
-  for (let i = 0; i < pool.length; i++) if (!done.has(i)) return i;
-  return -1;
-}
-function renderSwipe(){
-  const l = getList(swipeListId);
-  if (!l || !l.pool) { go('lists'); return; }
-  const pool = POOLS[l.pool] || [];
-  l.accIdx = l.accIdx || []; l.rejIdx = l.rejIdx || [];
-  const idx = swipeCandidateIdx(l);
-  let html = '<div class="topbar"><h1 style="font-size:17px">'+esc(l.name)+'</h1>' +
-    '<button class="menu-btn" onclick="finishSwipe()">Fertig</button></div>' +
-    '<p class="hint" style="margin-top:0">'+(l.accIdx.length + l.rejIdx.length)+' von '+pool.length+' entschieden · '+l.accIdx.length+' in der Liste'+(dirty?' · nicht gespeichert':'')+'</p>';
-  if (idx < 0) {
-    html += '<div class="card-panel" style="text-align:center">Alle Vorschläge entschieden – die Liste hat '+l.accIdx.length+' Songs.</div>';
-  } else {
-    const song = pool[idx];
-    const q = encodeURIComponent(song.t + ' ' + song.c);
-    html += '<div class="songcard" style="text-align:center;display:block;margin:10px auto 0">' +
-      '<div class="reveal-year" style="color:var(--accent)">'+song.y+'</div>' +
-      '<div class="reveal-title">'+esc(song.t)+'</div><div class="reveal-comp">'+esc(song.c)+'</div>';
-    if (song.u && connected()) html += '<div class="pctrl"><button class="main" onclick="playUrl(\''+song.u+'\')">Anhören</button></div>';
-    else if (song.u) html += '<div><a class="playlink" href="'+song.u+'" target="_blank" rel="noopener">In Spotify anhören</a></div>';
-    else html += '<div><a class="playlink" href="https://open.spotify.com/search/'+q+'" target="_blank" rel="noopener">In Spotify suchen</a></div>' +
-      '<div class="mysterytxt">Noch kein Link – wird nach dem Swipen für angenommene Songs ergänzt.</div>';
-    html += (playState.error ? '<div class="perr">'+esc(playState.error)+'</div>' : '') + '</div>' +
-      '<div class="doubtrow" style="margin-top:14px">' +
-      '<button style="border-color:#ff5c78;color:#ff5c78" onclick="swipeDecide(false)">Nicht rein</button>' +
-      '<button style="border-color:#4ade80;color:#4ade80" onclick="swipeDecide(true)">In die Liste</button></div>' +
-      (swipeHist.length ? '<button class="bigbtn ghost" onclick="swipeUndo()">Letzte Entscheidung zurück</button>' : '');
-  }
-  html += '<details class="ot" style="margin-top:14px;--tc:#b78bff"><summary><span>Songs in der Liste</span><span>'+l.accIdx.length+'</span></summary>' +
-    '<div style="padding:4px 12px 12px">' + l.accIdx.map(i =>
-      '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #2c2745;font-size:13px">' +
-      '<span>'+esc(pool[i].t)+' – '+esc(pool[i].c)+' ('+pool[i].y+')'+(pool[i].u?'':' · ohne Link')+'</span>' +
-      '<button class="menu-btn" onclick="removeFromList('+i+')">Raus</button></div>').join('') + '</div></details>';
-  app.innerHTML = html;
-}
-function swipeDecide(yes){
-  const l = getList(swipeListId);
-  const idx = swipeCandidateIdx(l);
-  if (idx < 0) return;
-  (yes ? l.accIdx : l.rejIdx).push(idx);
-  swipeHist.push({ idx, yes });
-  markDirty(); render();
-}
-function swipeUndo(){
-  const h = swipeHist.pop(); if (!h) return;
-  const l = getList(swipeListId);
-  const arr = h.yes ? l.accIdx : l.rejIdx;
-  const p = arr.indexOf(h.idx); if (p >= 0) arr.splice(p, 1);
-  markDirty(); render();
-}
-function removeFromList(i){
-  const l = getList(swipeListId);
-  const p = l.accIdx.indexOf(i);
-  if (p >= 0) { l.accIdx.splice(p, 1); l.rejIdx.push(i); }
-  markDirty(); render();
-}
-function finishSwipe(){
-  go('lists');
-  if (dirty) pushLists(true);
-}
-
 /* ================= EINSTELLUNGEN ================= */
 function renderSettings(){
   const a = connected();
-  app.innerHTML = '<h1>Ein<span class="neon">stellungen</span></h1>' +
+  app.innerHTML = '<h1>Spotify<span class="neon"> verbinden</span></h1>' +
     '<div class="card-panel">' +
-    '<label class="lbl">Spotify</label>' +
-    (a ? '<p class="setuplist"><b>Verbunden.</b> Songs starten automatisch über deine Spotify-App (Premium nötig).</p>' +
-         '<button class="bigbtn ghost" onclick="disconnect()">Spotify trennen</button>'
-       : '<p class="setuplist"><b>1.</b> Auf <b>developer.spotify.com/dashboard</b> eine App anlegen.<br>' +
-         '<b>2.</b> Redirect URI exakt so eintragen:</p>' +
+    (a ? '<p class="setuplist"><b>Verbunden.</b> Songs starten automatisch über deine Spotify-App (Premium nötig). Falls nichts spielt: Spotify-App einmal öffnen und kurz irgendwas anspielen.</p>' +
+         '<button class="bigbtn ghost" onclick="disconnect()">Verbindung trennen</button>'
+       : '<p class="setuplist">Einmaliges Setup (Spotify Premium nötig):<br>' +
+         '<b>1.</b> Auf <b>developer.spotify.com/dashboard</b> eine App anlegen.<br>' +
+         '<b>2.</b> Als <b>Redirect URI</b> exakt diese Adresse eintragen:</p>' +
          '<code class="uri">'+esc(redirectUri())+'</code>' +
-         '<p class="setuplist"><b>3.</b> Client ID hier einfügen:</p>' +
+         '<p class="setuplist"><b>3.</b> Die <b>Client ID</b> hier einfügen:</p>' +
          '<input class="tname" id="cid" placeholder="Client ID" value="'+esc(clientId())+'">' +
          '<button class="bigbtn green" onclick="saveCidAndConnect()">Mit Spotify verbinden</button>') +
-    '<label class="lbl">GitHub (Listen speichern)</label>' +
-    '<p class="setuplist">Fine-grained Token auf <b>github.com/settings/personal-access-tokens</b> anlegen: nur Repo <b>hitster</b>, Berechtigung "Contents: Read and write".</p>' +
-    '<input class="tname" id="ghtok" type="password" placeholder="GitHub-Token" value="'+esc(ghToken())+'">' +
-    '<button class="bigbtn ghost" onclick="saveGhToken()">Token speichern</button>' +
-    (syncMsg ? '<p class="hint">'+esc(syncMsg)+'</p>' : '') +
-    '<button class="bigbtn ghost" onclick="go(\'home\')">Zurück</button></div>';
+    '<button class="bigbtn ghost" onclick="go(\'home\')">Zurück</button></div>' +
+    '<p class="hint">Ohne Verbindung funktioniert das Spiel trotzdem – dann mit QR-Code und Spotify-Link.</p>';
 }
 function saveCidAndConnect(){
   const v = $('cid').value.trim();
@@ -769,17 +638,11 @@ function saveCidAndConnect(){
   localStorage.setItem(LS_CID, v);
   connectSpotify();
 }
-function saveGhToken(){
-  const v = $('ghtok').value.trim();
-  if (v) localStorage.setItem(LS_GHTOKEN, v); else localStorage.removeItem(LS_GHTOKEN);
-  syncMsg = v ? 'Token gespeichert.' : 'Token entfernt.';
-  if (dirty && v) pushLists(false); else render();
-}
 function disconnect(){ setAuth(null); render(); }
 
 /* ================= START ================= */
 if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js').catch(()=>{}); }
-app.innerHTML = '<h1>HITSTER <span class="neon">KLASSIK</span></h1><p class="hint" style="text-align:left;margin-top:14px">Lade Listen…</p>';
+app.innerHTML = '<h1>HITSTER <span class="neon">KLASSIK</span></h1><p class="hint" style="text-align:left;margin-top:14px">Lade Karten…</p>';
 handleRedirect().then(loadData).then(() => {
   if (S && S.phase && S.phase !== 'gameover') screen = 'game';
   render();
