@@ -1,0 +1,2444 @@
+[
+{
+"t": "WTK I – Präludium und Fuge c-Moll BWV 847",
+"c": "Bach",
+"y": 1722,
+"u": ""
+},
+{
+"t": "WTK I – Präludium Cis-Dur BWV 848",
+"c": "Bach",
+"y": 1722,
+"u": ""
+},
+{
+"t": "WTK II – Präludium f-Moll BWV 881",
+"c": "Bach",
+"y": 1742,
+"u": ""
+},
+{
+"t": "Partita Nr. 1 B-Dur – Giga",
+"c": "Bach",
+"y": 1726,
+"u": ""
+},
+{
+"t": "Partita Nr. 2 c-Moll – Sinfonia",
+"c": "Bach",
+"y": 1727,
+"u": ""
+},
+{
+"t": "Französische Suite Nr. 5 – Gavotte",
+"c": "Bach",
+"y": 1722,
+"u": ""
+},
+{
+"t": "Invention Nr. 1 C-Dur",
+"c": "Bach",
+"y": 1723,
+"u": ""
+},
+{
+"t": "Invention Nr. 8 F-Dur",
+"c": "Bach",
+"y": 1723,
+"u": ""
+},
+{
+"t": "Chromatische Fantasie und Fuge",
+"c": "Bach",
+"y": 1720,
+"u": ""
+},
+{
+"t": "Capriccio über die Abreise BWV 992",
+"c": "Bach",
+"y": 1704,
+"u": ""
+},
+{
+"t": "Chaconne d-Moll (Bach/Busoni)",
+"c": "Bach / Busoni",
+"y": 1893,
+"u": ""
+},
+{
+"t": "Sonate d-Moll K. 141",
+"c": "Scarlatti",
+"y": 1739,
+"u": ""
+},
+{
+"t": "Sonate f-Moll K. 466",
+"c": "Scarlatti",
+"y": 1739,
+"u": ""
+},
+{
+"t": "Sonate h-Moll K. 27",
+"c": "Scarlatti",
+"y": 1738,
+"u": ""
+},
+{
+"t": "Sonate f-Moll K. 87",
+"c": "Scarlatti",
+"y": 1742,
+"u": ""
+},
+{
+"t": "Sonate E-Dur K. 380",
+"c": "Scarlatti",
+"y": 1754,
+"u": ""
+},
+{
+"t": "Sonate G-Dur K. 455",
+"c": "Scarlatti",
+"y": 1755,
+"u": ""
+},
+{
+"t": "Chaconne G-Dur HWV 435",
+"c": "Händel",
+"y": 1733,
+"u": ""
+},
+{
+"t": "Suite E-Dur – Air mit Variationen 'Harmonious Blacksmith'",
+"c": "Händel",
+"y": 1720,
+"u": ""
+},
+{
+"t": "Le Tic-Toc-Choc",
+"c": "Couperin",
+"y": 1722,
+"u": ""
+},
+{
+"t": "Gavotte mit Variationen a-Moll",
+"c": "Rameau",
+"y": 1728,
+"u": ""
+},
+{
+"t": "Sonate C-Dur Hob. XVI:50, 1. Satz",
+"c": "Haydn",
+"y": 1794,
+"u": ""
+},
+{
+"t": "Sonate Es-Dur Hob. XVI:52, 1. Satz",
+"c": "Haydn",
+"y": 1794,
+"u": ""
+},
+{
+"t": "Sonate D-Dur Hob. XVI:37, 1. Satz",
+"c": "Haydn",
+"y": 1780,
+"u": ""
+},
+{
+"t": "Andante con variazioni f-Moll",
+"c": "Haydn",
+"y": 1793,
+"u": ""
+},
+{
+"t": "Sonate A-Dur KV 331, 1. Satz (Andante grazioso)",
+"c": "Mozart",
+"y": 1783,
+"u": ""
+},
+{
+"t": "Sonate c-Moll KV 457, 1. Satz",
+"c": "Mozart",
+"y": 1784,
+"u": ""
+},
+{
+"t": "Sonate a-Moll KV 310, 1. Satz",
+"c": "Mozart",
+"y": 1778,
+"u": ""
+},
+{
+"t": "Sonate B-Dur KV 333, 1. Satz",
+"c": "Mozart",
+"y": 1783,
+"u": ""
+},
+{
+"t": "Rondo a-Moll KV 511",
+"c": "Mozart",
+"y": 1787,
+"u": ""
+},
+{
+"t": "Adagio h-Moll KV 540",
+"c": "Mozart",
+"y": 1788,
+"u": ""
+},
+{
+"t": "12 Variationen 'Ah vous dirai-je, Maman'",
+"c": "Mozart",
+"y": 1781,
+"u": ""
+},
+{
+"t": "Fantasie c-Moll KV 475",
+"c": "Mozart",
+"y": 1785,
+"u": ""
+},
+{
+"t": "Sonatine C-Dur op. 36 Nr. 1",
+"c": "Clementi",
+"y": 1797,
+"u": ""
+},
+{
+"t": "Nocturne Nr. 5 B-Dur",
+"c": "John Field",
+"y": 1817,
+"u": ""
+},
+{
+"t": "Mondscheinsonate, 1. Satz",
+"c": "Beethoven",
+"y": 1801,
+"u": ""
+},
+{
+"t": "Pathétique, 1. Satz",
+"c": "Beethoven",
+"y": 1798,
+"u": ""
+},
+{
+"t": "Pathétique, 3. Satz",
+"c": "Beethoven",
+"y": 1798,
+"u": ""
+},
+{
+"t": "Der Sturm, 3. Satz",
+"c": "Beethoven",
+"y": 1802,
+"u": ""
+},
+{
+"t": "Les Adieux, 1. Satz",
+"c": "Beethoven",
+"y": 1810,
+"u": ""
+},
+{
+"t": "Sonate E-Dur op. 109, 3. Satz",
+"c": "Beethoven",
+"y": 1820,
+"u": ""
+},
+{
+"t": "Sonate As-Dur op. 110, 1. Satz",
+"c": "Beethoven",
+"y": 1821,
+"u": ""
+},
+{
+"t": "Sonate c-Moll op. 111, 2. Satz (Arietta)",
+"c": "Beethoven",
+"y": 1822,
+"u": ""
+},
+{
+"t": "Sonate e-Moll op. 90, 2. Satz",
+"c": "Beethoven",
+"y": 1814,
+"u": ""
+},
+{
+"t": "32 Variationen c-Moll WoO 80",
+"c": "Beethoven",
+"y": 1806,
+"u": ""
+},
+{
+"t": "6 Variationen F-Dur op. 34",
+"c": "Beethoven",
+"y": 1802,
+"u": ""
+},
+{
+"t": "Bagatelle op. 126 Nr. 3",
+"c": "Beethoven",
+"y": 1824,
+"u": ""
+},
+{
+"t": "Rondo G-Dur op. 51 Nr. 2",
+"c": "Beethoven",
+"y": 1798,
+"u": ""
+},
+{
+"t": "Andante favori F-Dur",
+"c": "Beethoven",
+"y": 1803,
+"u": ""
+},
+{
+"t": "Diabelli-Variationen – Thema und Var. 1",
+"c": "Beethoven",
+"y": 1823,
+"u": ""
+},
+{
+"t": "Impromptu Ges-Dur op. 90 Nr. 3",
+"c": "Schubert",
+"y": 1827,
+"u": ""
+},
+{
+"t": "Impromptu Es-Dur op. 90 Nr. 2",
+"c": "Schubert",
+"y": 1827,
+"u": ""
+},
+{
+"t": "Impromptu c-Moll op. 90 Nr. 1",
+"c": "Schubert",
+"y": 1827,
+"u": ""
+},
+{
+"t": "Impromptu As-Dur op. 142 Nr. 2",
+"c": "Schubert",
+"y": 1827,
+"u": ""
+},
+{
+"t": "Impromptu B-Dur op. 142 Nr. 3 (Rosamunde-Variationen)",
+"c": "Schubert",
+"y": 1827,
+"u": ""
+},
+{
+"t": "Klavierstück Es-Dur D 946 Nr. 2",
+"c": "Schubert",
+"y": 1828,
+"u": ""
+},
+{
+"t": "Sonate A-Dur D 959, 2. Satz (Andantino)",
+"c": "Schubert",
+"y": 1828,
+"u": ""
+},
+{
+"t": "Sonate c-Moll D 958, 1. Satz",
+"c": "Schubert",
+"y": 1828,
+"u": ""
+},
+{
+"t": "Sonate A-Dur D 664, 1. Satz",
+"c": "Schubert",
+"y": 1819,
+"u": ""
+},
+{
+"t": "Moment musical Nr. 2 As-Dur",
+"c": "Schubert",
+"y": 1827,
+"u": ""
+},
+{
+"t": "Moment musical Nr. 6 As-Dur",
+"c": "Schubert",
+"y": 1824,
+"u": ""
+},
+{
+"t": "Ungarische Melodie h-Moll D 817",
+"c": "Schubert",
+"y": 1824,
+"u": ""
+},
+{
+"t": "Venezianisches Gondellied op. 19 Nr. 6",
+"c": "Mendelssohn",
+"y": 1830,
+"u": ""
+},
+{
+"t": "Lied ohne Worte op. 30 Nr. 6 fis-Moll",
+"c": "Mendelssohn",
+"y": 1834,
+"u": ""
+},
+{
+"t": "Spinnerlied op. 67 Nr. 4",
+"c": "Mendelssohn",
+"y": 1845,
+"u": ""
+},
+{
+"t": "Duetto op. 38 Nr. 6",
+"c": "Mendelssohn",
+"y": 1837,
+"u": ""
+},
+{
+"t": "Rondo capriccioso E-Dur",
+"c": "Mendelssohn",
+"y": 1830,
+"u": ""
+},
+{
+"t": "Variations sérieuses",
+"c": "Mendelssohn",
+"y": 1841,
+"u": ""
+},
+{
+"t": "Fantasie fis-Moll op. 28",
+"c": "Mendelssohn",
+"y": 1833,
+"u": ""
+},
+{
+"t": "Nocturne b-Moll op. 9 Nr. 1",
+"c": "Chopin",
+"y": 1830,
+"u": ""
+},
+{
+"t": "Nocturne H-Dur op. 9 Nr. 3",
+"c": "Chopin",
+"y": 1830,
+"u": ""
+},
+{
+"t": "Nocturne F-Dur op. 15 Nr. 1",
+"c": "Chopin",
+"y": 1832,
+"u": ""
+},
+{
+"t": "Nocturne Fis-Dur op. 15 Nr. 2",
+"c": "Chopin",
+"y": 1832,
+"u": ""
+},
+{
+"t": "Nocturne Des-Dur op. 27 Nr. 2",
+"c": "Chopin",
+"y": 1836,
+"u": ""
+},
+{
+"t": "Nocturne H-Dur op. 32 Nr. 1",
+"c": "Chopin",
+"y": 1837,
+"u": ""
+},
+{
+"t": "Nocturne g-Moll op. 37 Nr. 1",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Nocturne c-Moll op. 48 Nr. 1",
+"c": "Chopin",
+"y": 1841,
+"u": ""
+},
+{
+"t": "Nocturne f-Moll op. 55 Nr. 1",
+"c": "Chopin",
+"y": 1843,
+"u": ""
+},
+{
+"t": "Nocturne H-Dur op. 62 Nr. 1",
+"c": "Chopin",
+"y": 1846,
+"u": ""
+},
+{
+"t": "Nocturne e-Moll op. 72 Nr. 1",
+"c": "Chopin",
+"y": 1827,
+"u": ""
+},
+{
+"t": "Etüde C-Dur op. 10 Nr. 1 (Wasserfall)",
+"c": "Chopin",
+"y": 1830,
+"u": ""
+},
+{
+"t": "Etüde cis-Moll op. 10 Nr. 4 (Torrent)",
+"c": "Chopin",
+"y": 1830,
+"u": ""
+},
+{
+"t": "Etüde Ges-Dur op. 10 Nr. 5 (Schwarze Tasten)",
+"c": "Chopin",
+"y": 1830,
+"u": ""
+},
+{
+"t": "Etüde F-Dur op. 10 Nr. 8",
+"c": "Chopin",
+"y": 1830,
+"u": ""
+},
+{
+"t": "Etüde As-Dur op. 25 Nr. 1 (Äolsharfe)",
+"c": "Chopin",
+"y": 1836,
+"u": ""
+},
+{
+"t": "Etüde f-Moll op. 25 Nr. 2",
+"c": "Chopin",
+"y": 1836,
+"u": ""
+},
+{
+"t": "Etüde cis-Moll op. 25 Nr. 7 (Cello-Etüde)",
+"c": "Chopin",
+"y": 1836,
+"u": ""
+},
+{
+"t": "Etüde c-Moll op. 25 Nr. 12 (Ozean)",
+"c": "Chopin",
+"y": 1836,
+"u": ""
+},
+{
+"t": "Prélude C-Dur op. 28 Nr. 1",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude G-Dur op. 28 Nr. 3",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude h-Moll op. 28 Nr. 6",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude A-Dur op. 28 Nr. 7",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude Fis-Dur op. 28 Nr. 13",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude b-Moll op. 28 Nr. 16",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude As-Dur op. 28 Nr. 17",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude c-Moll op. 28 Nr. 20",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude B-Dur op. 28 Nr. 21",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude d-Moll op. 28 Nr. 24",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Grande Valse brillante Es-Dur op. 18",
+"c": "Chopin",
+"y": 1833,
+"u": ""
+},
+{
+"t": "Walzer a-Moll op. 34 Nr. 2",
+"c": "Chopin",
+"y": 1834,
+"u": ""
+},
+{
+"t": "Walzer As-Dur op. 42",
+"c": "Chopin",
+"y": 1840,
+"u": ""
+},
+{
+"t": "Walzer As-Dur op. 64 Nr. 3",
+"c": "Chopin",
+"y": 1847,
+"u": ""
+},
+{
+"t": "Walzer As-Dur op. 69 Nr. 1 (L'Adieu)",
+"c": "Chopin",
+"y": 1835,
+"u": ""
+},
+{
+"t": "Walzer h-Moll op. 69 Nr. 2",
+"c": "Chopin",
+"y": 1829,
+"u": ""
+},
+{
+"t": "Walzer Ges-Dur op. 70 Nr. 1",
+"c": "Chopin",
+"y": 1832,
+"u": ""
+},
+{
+"t": "Walzer a-Moll op. posth. B. 150",
+"c": "Chopin",
+"y": 1847,
+"u": ""
+},
+{
+"t": "Mazurka B-Dur op. 7 Nr. 1",
+"c": "Chopin",
+"y": 1831,
+"u": ""
+},
+{
+"t": "Mazurka a-Moll op. 17 Nr. 4",
+"c": "Chopin",
+"y": 1833,
+"u": ""
+},
+{
+"t": "Mazurka D-Dur op. 33 Nr. 2",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Mazurka a-Moll op. 68 Nr. 2",
+"c": "Chopin",
+"y": 1827,
+"u": ""
+},
+{
+"t": "Polonaise cis-Moll op. 26 Nr. 1",
+"c": "Chopin",
+"y": 1835,
+"u": ""
+},
+{
+"t": "Militär-Polonaise A-Dur op. 40 Nr. 1",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Polonaise fis-Moll op. 44",
+"c": "Chopin",
+"y": 1841,
+"u": ""
+},
+{
+"t": "Polonaise-Fantaisie As-Dur op. 61",
+"c": "Chopin",
+"y": 1846,
+"u": ""
+},
+{
+"t": "Andante spianato et Grande Polonaise brillante",
+"c": "Chopin",
+"y": 1834,
+"u": ""
+},
+{
+"t": "Scherzo Nr. 1 h-Moll",
+"c": "Chopin",
+"y": 1832,
+"u": ""
+},
+{
+"t": "Scherzo Nr. 3 cis-Moll",
+"c": "Chopin",
+"y": 1839,
+"u": ""
+},
+{
+"t": "Scherzo Nr. 4 E-Dur",
+"c": "Chopin",
+"y": 1842,
+"u": ""
+},
+{
+"t": "Ballade Nr. 2 F-Dur",
+"c": "Chopin",
+"y": 1839,
+"u": ""
+},
+{
+"t": "Ballade Nr. 3 As-Dur",
+"c": "Chopin",
+"y": 1841,
+"u": ""
+},
+{
+"t": "Berceuse Des-Dur op. 57",
+"c": "Chopin",
+"y": 1844,
+"u": ""
+},
+{
+"t": "Fantaisie f-Moll op. 49",
+"c": "Chopin",
+"y": 1841,
+"u": ""
+},
+{
+"t": "Sonate h-Moll op. 58, 4. Satz",
+"c": "Chopin",
+"y": 1844,
+"u": ""
+},
+{
+"t": "Cantabile B-Dur",
+"c": "Chopin",
+"y": 1834,
+"u": ""
+},
+{
+"t": "Aufschwung (Fantasiestücke)",
+"c": "Schumann",
+"y": 1837,
+"u": ""
+},
+{
+"t": "Carnaval – Préambule",
+"c": "Schumann",
+"y": 1834,
+"u": ""
+},
+{
+"t": "Papillons op. 2 – Finale",
+"c": "Schumann",
+"y": 1831,
+"u": ""
+},
+{
+"t": "Arabeske C-Dur op. 18",
+"c": "Schumann",
+"y": 1839,
+"u": ""
+},
+{
+"t": "Toccata C-Dur op. 7",
+"c": "Schumann",
+"y": 1830,
+"u": ""
+},
+{
+"t": "Symphonische Etüden – Thema",
+"c": "Schumann",
+"y": 1834,
+"u": ""
+},
+{
+"t": "Vogel als Prophet (Waldszenen)",
+"c": "Schumann",
+"y": 1849,
+"u": ""
+},
+{
+"t": "Romanze Fis-Dur op. 28 Nr. 2",
+"c": "Schumann",
+"y": 1839,
+"u": ""
+},
+{
+"t": "Kreisleriana – Nr. 1",
+"c": "Schumann",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Widmung (Schumann/Liszt)",
+"c": "Schumann / Liszt",
+"y": 1848,
+"u": ""
+},
+{
+"t": "Rhapsodie h-Moll op. 79 Nr. 1",
+"c": "Brahms",
+"y": 1879,
+"u": ""
+},
+{
+"t": "Rhapsodie g-Moll op. 79 Nr. 2",
+"c": "Brahms",
+"y": 1879,
+"u": ""
+},
+{
+"t": "Rhapsodie Es-Dur op. 119 Nr. 4",
+"c": "Brahms",
+"y": 1893,
+"u": ""
+},
+{
+"t": "Intermezzo Es-Dur op. 117 Nr. 1",
+"c": "Brahms",
+"y": 1892,
+"u": ""
+},
+{
+"t": "Intermezzo b-Moll op. 117 Nr. 2",
+"c": "Brahms",
+"y": 1892,
+"u": ""
+},
+{
+"t": "Intermezzo h-Moll op. 119 Nr. 1",
+"c": "Brahms",
+"y": 1893,
+"u": ""
+},
+{
+"t": "Intermezzo E-Dur op. 116 Nr. 4",
+"c": "Brahms",
+"y": 1892,
+"u": ""
+},
+{
+"t": "Capriccio h-Moll op. 76 Nr. 2",
+"c": "Brahms",
+"y": 1878,
+"u": ""
+},
+{
+"t": "Paganini-Variationen – Buch 1, Thema",
+"c": "Brahms",
+"y": 1863,
+"u": ""
+},
+{
+"t": "Händel-Variationen – Thema",
+"c": "Brahms",
+"y": 1861,
+"u": ""
+},
+{
+"t": "Walzer As-Dur op. 39 Nr. 15",
+"c": "Brahms",
+"y": 1865,
+"u": ""
+},
+{
+"t": "Ungarische Rhapsodie Nr. 6",
+"c": "Liszt",
+"y": 1853,
+"u": ""
+},
+{
+"t": "Ungarische Rhapsodie Nr. 12",
+"c": "Liszt",
+"y": 1853,
+"u": ""
+},
+{
+"t": "Ungarische Rhapsodie Nr. 15 (Rákóczi-Marsch)",
+"c": "Liszt",
+"y": 1853,
+"u": ""
+},
+{
+"t": "Liebestraum Nr. 1",
+"c": "Liszt",
+"y": 1850,
+"u": ""
+},
+{
+"t": "Gnomenreigen",
+"c": "Liszt",
+"y": 1862,
+"u": ""
+},
+{
+"t": "Waldesrauschen",
+"c": "Liszt",
+"y": 1862,
+"u": ""
+},
+{
+"t": "Transzendentale Etüde Nr. 5 (Feux follets)",
+"c": "Liszt",
+"y": 1851,
+"u": ""
+},
+{
+"t": "Transzendentale Etüde Nr. 8 (Wilde Jagd)",
+"c": "Liszt",
+"y": 1851,
+"u": ""
+},
+{
+"t": "Transzendentale Etüde Nr. 10 f-Moll",
+"c": "Liszt",
+"y": 1851,
+"u": ""
+},
+{
+"t": "Vallée d'Obermann",
+"c": "Liszt",
+"y": 1855,
+"u": ""
+},
+{
+"t": "Au bord d'une source",
+"c": "Liszt",
+"y": 1855,
+"u": ""
+},
+{
+"t": "Les jeux d'eaux à la Villa d'Este",
+"c": "Liszt",
+"y": 1877,
+"u": ""
+},
+{
+"t": "Sonate h-Moll",
+"c": "Liszt",
+"y": 1853,
+"u": ""
+},
+{
+"t": "Funérailles",
+"c": "Liszt",
+"y": 1849,
+"u": ""
+},
+{
+"t": "Sposalizio",
+"c": "Liszt",
+"y": 1858,
+"u": ""
+},
+{
+"t": "Harmonies du soir",
+"c": "Liszt",
+"y": 1851,
+"u": ""
+},
+{
+"t": "Erlkönig (Schubert/Liszt)",
+"c": "Schubert / Liszt",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Auf dem Wasser zu singen (Schubert/Liszt)",
+"c": "Schubert / Liszt",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Arietta op. 12 Nr. 1",
+"c": "Grieg",
+"y": 1867,
+"u": ""
+},
+{
+"t": "Schmetterling op. 43 Nr. 1",
+"c": "Grieg",
+"y": 1886,
+"u": ""
+},
+{
+"t": "An den Frühling op. 43 Nr. 6",
+"c": "Grieg",
+"y": 1886,
+"u": ""
+},
+{
+"t": "Notturno op. 54 Nr. 4",
+"c": "Grieg",
+"y": 1891,
+"u": ""
+},
+{
+"t": "Zug der Zwerge op. 54 Nr. 3",
+"c": "Grieg",
+"y": 1891,
+"u": ""
+},
+{
+"t": "Erotik op. 43 Nr. 5",
+"c": "Grieg",
+"y": 1886,
+"u": ""
+},
+{
+"t": "Heimweh op. 57 Nr. 6",
+"c": "Grieg",
+"y": 1893,
+"u": ""
+},
+{
+"t": "Ballade g-Moll op. 24",
+"c": "Grieg",
+"y": 1876,
+"u": ""
+},
+{
+"t": "Die Jahreszeiten – Januar (Am Kamin)",
+"c": "Tschaikowsky",
+"y": 1876,
+"u": ""
+},
+{
+"t": "Die Jahreszeiten – April (Schneeglöckchen)",
+"c": "Tschaikowsky",
+"y": 1876,
+"u": ""
+},
+{
+"t": "Die Jahreszeiten – Juni (Barcarole)",
+"c": "Tschaikowsky",
+"y": 1876,
+"u": ""
+},
+{
+"t": "Die Jahreszeiten – Oktober (Herbstlied)",
+"c": "Tschaikowsky",
+"y": 1876,
+"u": ""
+},
+{
+"t": "Die Jahreszeiten – November (Troika)",
+"c": "Tschaikowsky",
+"y": 1876,
+"u": ""
+},
+{
+"t": "Die Jahreszeiten – Dezember (Weihnachten)",
+"c": "Tschaikowsky",
+"y": 1876,
+"u": ""
+},
+{
+"t": "Dumka op. 59",
+"c": "Tschaikowsky",
+"y": 1886,
+"u": ""
+},
+{
+"t": "Nocturne cis-Moll op. 19 Nr. 4",
+"c": "Tschaikowsky",
+"y": 1873,
+"u": ""
+},
+{
+"t": "Melodie F-Dur",
+"c": "Anton Rubinstein",
+"y": 1852,
+"u": ""
+},
+{
+"t": "Musikdose (Une tabatière à musique)",
+"c": "Ljadow",
+"y": 1893,
+"u": ""
+},
+{
+"t": "Prélude D-Dur op. 23 Nr. 4",
+"c": "Rachmaninow",
+"y": 1903,
+"u": ""
+},
+{
+"t": "Prélude G-Dur op. 32 Nr. 5",
+"c": "Rachmaninow",
+"y": 1910,
+"u": ""
+},
+{
+"t": "Prélude gis-Moll op. 32 Nr. 12",
+"c": "Rachmaninow",
+"y": 1910,
+"u": ""
+},
+{
+"t": "Étude-Tableau es-Moll op. 39 Nr. 5",
+"c": "Rachmaninow",
+"y": 1917,
+"u": ""
+},
+{
+"t": "Étude-Tableau a-Moll op. 39 Nr. 6",
+"c": "Rachmaninow",
+"y": 1917,
+"u": ""
+},
+{
+"t": "Moment musical Nr. 3 h-Moll",
+"c": "Rachmaninow",
+"y": 1896,
+"u": ""
+},
+{
+"t": "Moment musical Nr. 4 e-Moll",
+"c": "Rachmaninow",
+"y": 1896,
+"u": ""
+},
+{
+"t": "Élégie es-Moll op. 3 Nr. 1",
+"c": "Rachmaninow",
+"y": 1892,
+"u": ""
+},
+{
+"t": "Polichinelle op. 3 Nr. 4",
+"c": "Rachmaninow",
+"y": 1892,
+"u": ""
+},
+{
+"t": "Corelli-Variationen – Thema",
+"c": "Rachmaninow",
+"y": 1931,
+"u": ""
+},
+{
+"t": "Liebesleid (Kreisler/Rachmaninow)",
+"c": "Kreisler / Rachmaninow",
+"y": 1921,
+"u": ""
+},
+{
+"t": "Etüde cis-Moll op. 2 Nr. 1",
+"c": "Skrjabin",
+"y": 1887,
+"u": ""
+},
+{
+"t": "Etüde cis-Moll op. 42 Nr. 5",
+"c": "Skrjabin",
+"y": 1903,
+"u": ""
+},
+{
+"t": "Prélude e-Moll op. 11 Nr. 4",
+"c": "Skrjabin",
+"y": 1888,
+"u": ""
+},
+{
+"t": "Poème Fis-Dur op. 32 Nr. 1",
+"c": "Skrjabin",
+"y": 1903,
+"u": ""
+},
+{
+"t": "Vers la flamme",
+"c": "Skrjabin",
+"y": 1914,
+"u": ""
+},
+{
+"t": "Sonate Nr. 5",
+"c": "Skrjabin",
+"y": 1907,
+"u": ""
+},
+{
+"t": "Märchen f-Moll op. 26 Nr. 3",
+"c": "Medtner",
+"y": 1912,
+"u": ""
+},
+{
+"t": "Suggestion diabolique",
+"c": "Prokofjew",
+"y": 1908,
+"u": ""
+},
+{
+"t": "Visions fugitives – Nr. 1",
+"c": "Prokofjew",
+"y": 1917,
+"u": ""
+},
+{
+"t": "Sonate Nr. 7 – Precipitato",
+"c": "Prokofjew",
+"y": 1942,
+"u": ""
+},
+{
+"t": "Sonate Nr. 3 a-Moll",
+"c": "Prokofjew",
+"y": 1917,
+"u": ""
+},
+{
+"t": "Tanz der Ritter (Klavierfassung op. 75)",
+"c": "Prokofjew",
+"y": 1937,
+"u": ""
+},
+{
+"t": "Präludium op. 34 Nr. 5 D-Dur",
+"c": "Schostakowitsch",
+"y": 1933,
+"u": ""
+},
+{
+"t": "Toccata",
+"c": "Chatschaturjan",
+"y": 1932,
+"u": ""
+},
+{
+"t": "Arabesque Nr. 2",
+"c": "Debussy",
+"y": 1888,
+"u": ""
+},
+{
+"t": "Suite bergamasque – Prélude",
+"c": "Debussy",
+"y": 1890,
+"u": ""
+},
+{
+"t": "Suite bergamasque – Passepied",
+"c": "Debussy",
+"y": 1890,
+"u": ""
+},
+{
+"t": "Pour le piano – Toccata",
+"c": "Debussy",
+"y": 1901,
+"u": ""
+},
+{
+"t": "Estampes – Pagodes",
+"c": "Debussy",
+"y": 1903,
+"u": ""
+},
+{
+"t": "Estampes – Jardins sous la pluie",
+"c": "Debussy",
+"y": 1903,
+"u": ""
+},
+{
+"t": "Estampes – La soirée dans Grenade",
+"c": "Debussy",
+"y": 1903,
+"u": ""
+},
+{
+"t": "Images – Reflets dans l'eau",
+"c": "Debussy",
+"y": 1905,
+"u": ""
+},
+{
+"t": "Images – Poissons d'or",
+"c": "Debussy",
+"y": 1907,
+"u": ""
+},
+{
+"t": "L'isle joyeuse",
+"c": "Debussy",
+"y": 1904,
+"u": ""
+},
+{
+"t": "Children's Corner – Doctor Gradus ad Parnassum",
+"c": "Debussy",
+"y": 1908,
+"u": ""
+},
+{
+"t": "Children's Corner – The Snow Is Dancing",
+"c": "Debussy",
+"y": 1908,
+"u": ""
+},
+{
+"t": "Préludes – Danseuses de Delphes",
+"c": "Debussy",
+"y": 1910,
+"u": ""
+},
+{
+"t": "Préludes – Voiles",
+"c": "Debussy",
+"y": 1910,
+"u": ""
+},
+{
+"t": "Préludes – Des pas sur la neige",
+"c": "Debussy",
+"y": 1910,
+"u": ""
+},
+{
+"t": "Préludes – Minstrels",
+"c": "Debussy",
+"y": 1910,
+"u": ""
+},
+{
+"t": "Préludes – Feux d'artifice",
+"c": "Debussy",
+"y": 1913,
+"u": ""
+},
+{
+"t": "Préludes – Bruyères",
+"c": "Debussy",
+"y": 1913,
+"u": ""
+},
+{
+"t": "Jeux d'eau",
+"c": "Ravel",
+"y": 1901,
+"u": ""
+},
+{
+"t": "Miroirs – Alborada del gracioso",
+"c": "Ravel",
+"y": 1905,
+"u": ""
+},
+{
+"t": "Miroirs – Oiseaux tristes",
+"c": "Ravel",
+"y": 1905,
+"u": ""
+},
+{
+"t": "Miroirs – Une barque sur l'océan",
+"c": "Ravel",
+"y": 1905,
+"u": ""
+},
+{
+"t": "Gaspard de la nuit – Scarbo",
+"c": "Ravel",
+"y": 1908,
+"u": ""
+},
+{
+"t": "Gaspard de la nuit – Le Gibet",
+"c": "Ravel",
+"y": 1908,
+"u": ""
+},
+{
+"t": "Menuet antique",
+"c": "Ravel",
+"y": 1895,
+"u": ""
+},
+{
+"t": "Valses nobles et sentimentales – Nr. 1",
+"c": "Ravel",
+"y": 1911,
+"u": ""
+},
+{
+"t": "Nocturne Nr. 6 Des-Dur",
+"c": "Fauré",
+"y": 1894,
+"u": ""
+},
+{
+"t": "Barcarolle Nr. 1 a-Moll",
+"c": "Fauré",
+"y": 1881,
+"u": ""
+},
+{
+"t": "Impromptu Nr. 2 f-Moll",
+"c": "Fauré",
+"y": 1883,
+"u": ""
+},
+{
+"t": "Gymnopédie Nr. 2",
+"c": "Satie",
+"y": 1888,
+"u": ""
+},
+{
+"t": "Gymnopédie Nr. 3",
+"c": "Satie",
+"y": 1888,
+"u": ""
+},
+{
+"t": "Gnossienne Nr. 3",
+"c": "Satie",
+"y": 1890,
+"u": ""
+},
+{
+"t": "Gnossienne Nr. 5",
+"c": "Satie",
+"y": 1889,
+"u": ""
+},
+{
+"t": "Je te veux (Klavierfassung)",
+"c": "Satie",
+"y": 1897,
+"u": ""
+},
+{
+"t": "Mouvements perpétuels – Nr. 1",
+"c": "Poulenc",
+"y": 1918,
+"u": ""
+},
+{
+"t": "Idylle (Pièces pittoresques)",
+"c": "Chabrier",
+"y": 1881,
+"u": ""
+},
+{
+"t": "Canción y danza Nr. 6",
+"c": "Mompou",
+"y": 1942,
+"u": ""
+},
+{
+"t": "Jeunes filles au jardin",
+"c": "Mompou",
+"y": 1918,
+"u": ""
+},
+{
+"t": "Granada (Suite española)",
+"c": "Albéniz",
+"y": 1886,
+"u": ""
+},
+{
+"t": "Sevilla (Suite española)",
+"c": "Albéniz",
+"y": 1886,
+"u": ""
+},
+{
+"t": "Tango D-Dur op. 165 Nr. 2",
+"c": "Albéniz",
+"y": 1890,
+"u": ""
+},
+{
+"t": "Iberia – Evocación",
+"c": "Albéniz",
+"y": 1906,
+"u": ""
+},
+{
+"t": "Spanischer Tanz Nr. 5 (Andaluza)",
+"c": "Granados",
+"y": 1890,
+"u": ""
+},
+{
+"t": "Quejas o la maja y el ruiseñor (Goyescas)",
+"c": "Granados",
+"y": 1911,
+"u": ""
+},
+{
+"t": "O Polichinelo",
+"c": "Villa-Lobos",
+"y": 1918,
+"u": ""
+},
+{
+"t": "Danzas argentinas – Nr. 2",
+"c": "Ginastera",
+"y": 1937,
+"u": ""
+},
+{
+"t": "The Banjo",
+"c": "Gottschalk",
+"y": 1855,
+"u": ""
+},
+{
+"t": "Maple Leaf Rag",
+"c": "Scott Joplin",
+"y": 1899,
+"u": ""
+},
+{
+"t": "Solace",
+"c": "Scott Joplin",
+"y": 1909,
+"u": ""
+},
+{
+"t": "The Easy Winners",
+"c": "Scott Joplin",
+"y": 1901,
+"u": ""
+},
+{
+"t": "Prelude Nr. 1 (3 Preludes)",
+"c": "Gershwin",
+"y": 1926,
+"u": ""
+},
+{
+"t": "To a Wild Rose",
+"c": "MacDowell",
+"y": 1896,
+"u": ""
+},
+{
+"t": "Le festin d'Ésope",
+"c": "Alkan",
+"y": 1857,
+"u": ""
+},
+{
+"t": "Étincelles",
+"c": "Moszkowski",
+"y": 1886,
+"u": ""
+},
+{
+"t": "Menuett G-Dur",
+"c": "Paderewski",
+"y": 1887,
+"u": ""
+},
+{
+"t": "Frühlingsrauschen",
+"c": "Sinding",
+"y": 1896,
+"u": ""
+},
+{
+"t": "Automne op. 35 Nr. 2",
+"c": "Chaminade",
+"y": 1886,
+"u": ""
+},
+{
+"t": "Romanze a-Moll op. 21 Nr. 1",
+"c": "Clara Schumann",
+"y": 1853,
+"u": ""
+},
+{
+"t": "Melodie E-Dur op. 4 Nr. 2",
+"c": "Fanny Hensel",
+"y": 1846,
+"u": ""
+},
+{
+"t": "D'un vieux jardin",
+"c": "Lili Boulanger",
+"y": 1914,
+"u": ""
+},
+{
+"t": "Country Gardens",
+"c": "Percy Grainger",
+"y": 1918,
+"u": ""
+},
+{
+"t": "Romance Des-Dur op. 24 Nr. 9",
+"c": "Sibelius",
+"y": 1895,
+"u": ""
+},
+{
+"t": "Salut d'amour (Klavierfassung)",
+"c": "Elgar",
+"y": 1888,
+"u": ""
+},
+{
+"t": "Allegro appassionato op. 70",
+"c": "Saint-Saëns",
+"y": 1884,
+"u": ""
+},
+{
+"t": "Der Schwan (Klavierfassung Godowsky)",
+"c": "Saint-Saëns / Godowsky",
+"y": 1927,
+"u": ""
+},
+{
+"t": "Auf verwachsenem Pfade – Unsere Abende",
+"c": "Janáček",
+"y": 1908,
+"u": ""
+},
+{
+"t": "Sonate 1.X.1905 – Vorahnung",
+"c": "Janáček",
+"y": 1905,
+"u": ""
+},
+{
+"t": "Allegro barbaro",
+"c": "Bartók",
+"y": 1911,
+"u": ""
+},
+{
+"t": "Abend am Lande (10 leichte Klavierstücke)",
+"c": "Bartók",
+"y": 1908,
+"u": ""
+},
+{
+"t": "In der Halle des Bergkönigs (Klavierfassung)",
+"c": "Grieg",
+"y": 1875,
+"u": ""
+},
+{
+"t": "Für Alina",
+"c": "Pärt",
+"y": 1976,
+"u": ""
+},
+{
+"t": "Variationen zur Gesundung von Arinuschka",
+"c": "Pärt",
+"y": 1977,
+"u": ""
+},
+{
+"t": "Mad Rush",
+"c": "Glass",
+"y": 1979,
+"u": ""
+},
+{
+"t": "Metamorphosis One",
+"c": "Glass",
+"y": 1988,
+"u": ""
+},
+{
+"t": "Etüde Nr. 6",
+"c": "Glass",
+"y": 1994,
+"u": ""
+},
+{
+"t": "Opening (Glassworks, Klavierfassung)",
+"c": "Glass",
+"y": 1981,
+"u": ""
+},
+{
+"t": "Una Mattina",
+"c": "Einaudi",
+"y": 2004,
+"u": ""
+},
+{
+"t": "I Giorni",
+"c": "Einaudi",
+"y": 2001,
+"u": ""
+},
+{
+"t": "Experience",
+"c": "Einaudi",
+"y": 2013,
+"u": ""
+},
+{
+"t": "Divenire",
+"c": "Einaudi",
+"y": 2006,
+"u": ""
+},
+{
+"t": "Primavera",
+"c": "Einaudi",
+"y": 2006,
+"u": ""
+},
+{
+"t": "Fly",
+"c": "Einaudi",
+"y": 2006,
+"u": ""
+},
+{
+"t": "La Valse d'Amélie (Klavierfassung)",
+"c": "Yann Tiersen",
+"y": 2001,
+"u": ""
+},
+{
+"t": "La Dispute",
+"c": "Yann Tiersen",
+"y": 2001,
+"u": ""
+},
+{
+"t": "Kiss the Rain",
+"c": "Yiruma",
+"y": 2003,
+"u": ""
+},
+{
+"t": "May Be",
+"c": "Yiruma",
+"y": 2001,
+"u": ""
+},
+{
+"t": "Love Me",
+"c": "Yiruma",
+"y": 2001,
+"u": ""
+},
+{
+"t": "Energy Flow",
+"c": "Sakamoto",
+"y": 1999,
+"u": ""
+},
+{
+"t": "Aqua",
+"c": "Sakamoto",
+"y": 1998,
+"u": ""
+},
+{
+"t": "Summer (Kikujiro)",
+"c": "Joe Hisaishi",
+"y": 1999,
+"u": ""
+},
+{
+"t": "One Summer's Day (Chihiro)",
+"c": "Joe Hisaishi",
+"y": 2001,
+"u": ""
+},
+{
+"t": "Merry-Go-Round of Life (Klavierfassung)",
+"c": "Joe Hisaishi",
+"y": 2004,
+"u": ""
+},
+{
+"t": "River Flows in You (Original)",
+"c": "Yiruma",
+"y": 2001,
+"u": ""
+},
+{
+"t": "Ambre",
+"c": "Nils Frahm",
+"y": 2009,
+"u": ""
+},
+{
+"t": "Saman",
+"c": "Ólafur Arnalds",
+"y": 2013,
+"u": ""
+},
+{
+"t": "Tomorrow's Song",
+"c": "Ólafur Arnalds",
+"y": 2011,
+"u": ""
+},
+{
+"t": "Dot",
+"c": "Chilly Gonzales",
+"y": 2004,
+"u": ""
+},
+{
+"t": "White Keys",
+"c": "Chilly Gonzales",
+"y": 2012,
+"u": ""
+},
+{
+"t": "Nuvole Bianche (Original)",
+"c": "Einaudi",
+"y": 2004,
+"u": ""
+},
+{
+"t": "Elegy for the Arctic",
+"c": "Einaudi",
+"y": 2016,
+"u": ""
+},
+{
+"t": "Big My Secret (Das Piano)",
+"c": "Michael Nyman",
+"y": 1993,
+"u": ""
+},
+{
+"t": "Written on the Sky",
+"c": "Max Richter",
+"y": 2004,
+"u": ""
+},
+{
+"t": "Vladimir's Blues",
+"c": "Max Richter",
+"y": 2004,
+"u": ""
+},
+{
+"t": "The Heart Asks Pleasure First (Original)",
+"c": "Michael Nyman",
+"y": 1993,
+"u": ""
+},
+{
+"t": "Vexations (Ausschnitt)",
+"c": "Satie",
+"y": 1893,
+"u": ""
+},
+{
+"t": "Pièces froides – Airs à faire fuir Nr. 1",
+"c": "Satie",
+"y": 1897,
+"u": ""
+},
+{
+"t": "Solfeggietto c-Moll",
+"c": "C.P.E. Bach",
+"y": 1766,
+"u": ""
+},
+{
+"t": "Le Coucou",
+"c": "Daquin",
+"y": 1735,
+"u": ""
+},
+{
+"t": "Präludium c-Moll BWV 999",
+"c": "Bach",
+"y": 1720,
+"u": ""
+},
+{
+"t": "Toccata e-Moll BWV 914",
+"c": "Bach",
+"y": 1710,
+"u": ""
+},
+{
+"t": "Siciliano g-Moll (Bach/Kempff)",
+"c": "Bach / Kempff",
+"y": 1931,
+"u": ""
+},
+{
+"t": "Le rappel des oiseaux",
+"c": "Rameau",
+"y": 1724,
+"u": ""
+},
+{
+"t": "Les tendres plaintes",
+"c": "Rameau",
+"y": 1724,
+"u": ""
+},
+{
+"t": "Les moissonneurs",
+"c": "Couperin",
+"y": 1717,
+"u": ""
+},
+{
+"t": "Sonatine C-Dur op. 20 Nr. 1",
+"c": "Kuhlau",
+"y": 1820,
+"u": ""
+},
+{
+"t": "Sonate C-Dur Hob. XVI:35, 1. Satz",
+"c": "Haydn",
+"y": 1780,
+"u": ""
+},
+{
+"t": "Fantasie C-Dur Hob. XVII:4",
+"c": "Haydn",
+"y": 1789,
+"u": ""
+},
+{
+"t": "Sonate G-Dur KV 283, 1. Satz",
+"c": "Mozart",
+"y": 1775,
+"u": ""
+},
+{
+"t": "Sonate F-Dur KV 332, 3. Satz",
+"c": "Mozart",
+"y": 1783,
+"u": ""
+},
+{
+"t": "Sonate D-Dur KV 576, 1. Satz",
+"c": "Mozart",
+"y": 1789,
+"u": ""
+},
+{
+"t": "Sonate D-Dur op. 10 Nr. 3, 2. Satz (Largo)",
+"c": "Beethoven",
+"y": 1798,
+"u": ""
+},
+{
+"t": "Trauermarsch (Sonate op. 26)",
+"c": "Beethoven",
+"y": 1801,
+"u": ""
+},
+{
+"t": "Pastorale-Sonate op. 28, 1. Satz",
+"c": "Beethoven",
+"y": 1801,
+"u": ""
+},
+{
+"t": "Sonate G-Dur op. 79, 3. Satz",
+"c": "Beethoven",
+"y": 1809,
+"u": ""
+},
+{
+"t": "Bagatelle A-Dur op. 33 Nr. 4",
+"c": "Beethoven",
+"y": 1802,
+"u": ""
+},
+{
+"t": "Bagatelle g-Moll op. 119 Nr. 1",
+"c": "Beethoven",
+"y": 1822,
+"u": ""
+},
+{
+"t": "Impromptu f-Moll op. 142 Nr. 1",
+"c": "Schubert",
+"y": 1827,
+"u": ""
+},
+{
+"t": "Impromptu f-Moll op. 142 Nr. 4",
+"c": "Schubert",
+"y": 1827,
+"u": ""
+},
+{
+"t": "Scherzo B-Dur D 593 Nr. 1",
+"c": "Schubert",
+"y": 1817,
+"u": ""
+},
+{
+"t": "Sonate G-Dur D 894, 1. Satz",
+"c": "Schubert",
+"y": 1826,
+"u": ""
+},
+{
+"t": "Arabesque (25 Etüden op. 100)",
+"c": "Burgmüller",
+"y": 1851,
+"u": ""
+},
+{
+"t": "Ballade (25 Etüden op. 100)",
+"c": "Burgmüller",
+"y": 1851,
+"u": ""
+},
+{
+"t": "Nocturne Nr. 1 Es-Dur",
+"c": "John Field",
+"y": 1812,
+"u": ""
+},
+{
+"t": "Etüde Ges-Dur op. 25 Nr. 9 (Schmetterling)",
+"c": "Chopin",
+"y": 1836,
+"u": ""
+},
+{
+"t": "Prélude cis-Moll op. 45",
+"c": "Chopin",
+"y": 1841,
+"u": ""
+},
+{
+"t": "Prélude E-Dur op. 28 Nr. 9",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude fis-Moll op. 28 Nr. 8",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Prélude Es-Dur op. 28 Nr. 19",
+"c": "Chopin",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Mazurka cis-Moll op. 63 Nr. 3",
+"c": "Chopin",
+"y": 1846,
+"u": ""
+},
+{
+"t": "Mazurka f-Moll op. 68 Nr. 4",
+"c": "Chopin",
+"y": 1849,
+"u": ""
+},
+{
+"t": "Variations brillantes op. 12",
+"c": "Chopin",
+"y": 1833,
+"u": ""
+},
+{
+"t": "Trois Écossaises op. 72 Nr. 3",
+"c": "Chopin",
+"y": 1826,
+"u": ""
+},
+{
+"t": "Consolation Nr. 2",
+"c": "Liszt",
+"y": 1850,
+"u": ""
+},
+{
+"t": "La leggierezza",
+"c": "Liszt",
+"y": 1848,
+"u": ""
+},
+{
+"t": "Valse oubliée Nr. 1",
+"c": "Liszt",
+"y": 1881,
+"u": ""
+},
+{
+"t": "Rigoletto-Paraphrase",
+"c": "Liszt",
+"y": 1859,
+"u": ""
+},
+{
+"t": "Csárdás obstinée",
+"c": "Liszt",
+"y": 1884,
+"u": ""
+},
+{
+"t": "Nuages gris",
+"c": "Liszt",
+"y": 1881,
+"u": ""
+},
+{
+"t": "Glückes genug (Kinderszenen)",
+"c": "Schumann",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Fürchtenmachen (Kinderszenen)",
+"c": "Schumann",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Der Dichter spricht (Kinderszenen)",
+"c": "Schumann",
+"y": 1838,
+"u": ""
+},
+{
+"t": "Erster Verlust (Album für die Jugend)",
+"c": "Schumann",
+"y": 1848,
+"u": ""
+},
+{
+"t": "Fröhlicher Landmann (Album für die Jugend)",
+"c": "Schumann",
+"y": 1848,
+"u": ""
+},
+{
+"t": "Träumes Wirren (Fantasiestücke)",
+"c": "Schumann",
+"y": 1837,
+"u": ""
+},
+{
+"t": "Ballade d-Moll op. 10 Nr. 1 (Edward)",
+"c": "Brahms",
+"y": 1854,
+"u": ""
+},
+{
+"t": "Intermezzo C-Dur op. 119 Nr. 3",
+"c": "Brahms",
+"y": 1893,
+"u": ""
+},
+{
+"t": "Vöglein op. 43 Nr. 4",
+"c": "Grieg",
+"y": 1886,
+"u": ""
+},
+{
+"t": "Elfentanz op. 12 Nr. 4",
+"c": "Grieg",
+"y": 1867,
+"u": ""
+},
+{
+"t": "Berceuse op. 38 Nr. 1",
+"c": "Grieg",
+"y": 1883,
+"u": ""
+},
+{
+"t": "Kobold op. 71 Nr. 3",
+"c": "Grieg",
+"y": 1901,
+"u": ""
+},
+{
+"t": "Chanson triste op. 40 Nr. 2",
+"c": "Tschaikowsky",
+"y": 1878,
+"u": ""
+},
+{
+"t": "Valse sentimentale op. 51 Nr. 6",
+"c": "Tschaikowsky",
+"y": 1882,
+"u": ""
+},
+{
+"t": "Humoreske op. 10 Nr. 2",
+"c": "Tschaikowsky",
+"y": 1871,
+"u": ""
+},
+{
+"t": "Mélodie op. 3 Nr. 3",
+"c": "Rachmaninow",
+"y": 1892,
+"u": ""
+},
+{
+"t": "Sérénade op. 3 Nr. 5",
+"c": "Rachmaninow",
+"y": 1892,
+"u": ""
+},
+{
+"t": "Barcarolle g-Moll op. 10 Nr. 3",
+"c": "Rachmaninow",
+"y": 1894,
+"u": ""
+},
+{
+"t": "Prélude Es-Dur op. 23 Nr. 6",
+"c": "Rachmaninow",
+"y": 1903,
+"u": ""
+},
+{
+"t": "Prélude h-Moll op. 32 Nr. 10",
+"c": "Rachmaninow",
+"y": 1910,
+"u": ""
+},
+{
+"t": "Prélude für die linke Hand op. 9 Nr. 1",
+"c": "Skrjabin",
+"y": 1894,
+"u": ""
+},
+{
+"t": "Une larme",
+"c": "Mussorgski",
+"y": 1880,
+"u": ""
+},
+{
+"t": "La Séparation (Nocturne f-Moll)",
+"c": "Glinka",
+"y": 1839,
+"u": ""
+},
+{
+"t": "Sérénade (Petite Suite)",
+"c": "Borodin",
+"y": 1885,
+"u": ""
+},
+{
+"t": "Étude Des-Dur op. 15 Nr. 8",
+"c": "Bortkiewicz",
+"y": 1911,
+"u": ""
+},
+{
+"t": "Alt Wien",
+"c": "Godowsky",
+"y": 1919,
+"u": ""
+},
+{
+"t": "Étude en forme de valse op. 52 Nr. 6",
+"c": "Saint-Saëns",
+"y": 1877,
+"u": ""
+},
+{
+"t": "Romance sans paroles Nr. 3 As-Dur",
+"c": "Fauré",
+"y": 1863,
+"u": ""
+},
+{
+"t": "Prélude (Prélude, Choral et Fugue)",
+"c": "Franck",
+"y": 1884,
+"u": ""
+},
+{
+"t": "Le petit âne blanc",
+"c": "Ibert",
+"y": 1922,
+"u": ""
+},
+{
+"t": "Nocturne Nr. 1 C-Dur",
+"c": "Poulenc",
+"y": 1929,
+"u": ""
+},
+{
+"t": "Improvisation Nr. 15 c-Moll (Hommage à Edith Piaf)",
+"c": "Poulenc",
+"y": 1959,
+"u": ""
+},
+{
+"t": "Musica ricercata – Nr. 2",
+"c": "Ligeti",
+"y": 1953,
+"u": ""
+},
+{
+"t": "Konzert-Etüde op. 40 Nr. 1 (Prelude)",
+"c": "Kapustin",
+"y": 1984,
+"u": ""
+},
+{
+"t": "Adiós Nonino (Klavierfassung)",
+"c": "Piazzolla",
+"y": 1959,
+"u": ""
+},
+{
+"t": "Odeon",
+"c": "Ernesto Nazareth",
+"y": 1910,
+"u": ""
+},
+{
+"t": "Malagueña (Suite Andalucía)",
+"c": "Lecuona",
+"y": 1928,
+"u": ""
+},
+{
+"t": "La plus que lente",
+"c": "Debussy",
+"y": 1910,
+"u": ""
+},
+{
+"t": "Jimbo's Lullaby (Children's Corner)",
+"c": "Debussy",
+"y": 1908,
+"u": ""
+},
+{
+"t": "Serenade for the Doll (Children's Corner)",
+"c": "Debussy",
+"y": 1908,
+"u": ""
+},
+{
+"t": "Préludes – La sérénade interrompue",
+"c": "Debussy",
+"y": 1910,
+"u": ""
+},
+{
+"t": "Préludes – Ondine",
+"c": "Debussy",
+"y": 1913,
+"u": ""
+},
+{
+"t": "Préludes – Général Lavine, excentric",
+"c": "Debussy",
+"y": 1913,
+"u": ""
+},
+{
+"t": "D'un cahier d'esquisses",
+"c": "Debussy",
+"y": 1904,
+"u": ""
+},
+{
+"t": "Masques",
+"c": "Debussy",
+"y": 1904,
+"u": ""
+},
+{
+"t": "Danse bohémienne",
+"c": "Debussy",
+"y": 1880,
+"u": ""
+},
+{
+"t": "À la manière de Chabrier",
+"c": "Ravel",
+"y": 1913,
+"u": ""
+},
+{
+"t": "Prélude a-Moll",
+"c": "Ravel",
+"y": 1913,
+"u": ""
+},
+{
+"t": "Struggle for Pleasure",
+"c": "Wim Mertens",
+"y": 1983,
+"u": ""
+},
+{
+"t": "Opus 23",
+"c": "Dustin O'Halloran",
+"y": 2006,
+"u": ""
+},
+{
+"t": "Opus 36",
+"c": "Dustin O'Halloran",
+"y": 2011,
+"u": ""
+},
+{
+"t": "Nocturne (aus 'Nocturnes')",
+"c": "Chilly Gonzales",
+"y": 2004,
+"u": ""
+},
+{
+"t": "Gogol",
+"c": "Chilly Gonzales",
+"y": 2004,
+"u": ""
+}
+]

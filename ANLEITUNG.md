@@ -36,3 +36,16 @@ Kostenlos mit GitHub Pages:
 
 - Playback-Steuerung erfordert **Spotify Premium** (Spotify-Beschränkung).
 - Spielstand und Highscore werden im Browser gespeichert.
+
+## Listen und Swipen (v2)
+
+- Die Karten-Listen liegen jetzt in **lists.json** im Repo, Vorschlags-Pools (z.B. **pool-klavier.json** mit 400+ Klavierwerken) daneben.
+- Beim Spielstart wählst du per Checkboxen **eine oder mehrere Listen** – der Stapel ist die Vereinigung (Duplikate werden entfernt).
+- Unter "Listen und Swipen" swipest du Pool-Vorschläge in eine Liste ("In die Liste" / "Nicht rein").
+- **Speichern auf GitHub:** Einmalig ein Token anlegen unter github.com → Settings → Developer settings →
+  **Fine-grained personal access tokens** → "Generate new token": nur Repository `hitster` auswählen,
+  unter Permissions **Contents: Read and write**. Token in der App unter Einstellungen einfügen.
+  Ohne Token bleiben Swipe-Änderungen nur lokal auf dem Gerät.
+- Neue Songs im Pool haben noch **keine Spotify-Links** – zum Anhören öffnet der Button die Spotify-Suche.
+  Wenn du fertig geswipet hast, sag Claude Bescheid: Die Links für deine angenommenen Songs werden dann
+  recherchiert und committet, erst danach sind sie im Spiel ziehbar.
