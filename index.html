@@ -147,6 +147,14 @@ details.ot summary { padding: 10px 14px; font-size: 13px; font-weight: 800; colo
 code.uri { display:block; background: var(--panel2); border-radius: 10px; padding: 10px; font-size: 12px; word-break: break-all; margin: 6px 0 2px; color: #8ec7ff; }
 .setuplist { font-size: 13.5px; color: var(--muted); line-height: 1.7; margin-top: 8px; }
 .setuplist b { color: var(--text); }
+
+/* Swipe */
+.swipecard { position: relative; margin: 8px auto 0; width: min(340px, 90vw); border-radius: 22px; padding: 22px 16px 18px;
+  background: linear-gradient(160deg, #2b2545, #1a1730); border: 2px solid #453d6b; box-shadow: 0 14px 40px rgba(0,0,0,.5); text-align: center; }
+.swipebar { display: flex; gap: 8px; margin: 4px 0 2px; }
+.swipebar .pill { flex: 1; text-align: center; background: var(--panel); border-radius: 12px; padding: 8px 6px; border: 2px solid #2c2745; }
+.swipebar .pill b { display: block; font-size: 18px; font-weight: 900; }
+.swipebar .pill span { font-size: 10.5px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: .4px; }
 </style>
 </head>
 <body>
@@ -154,7 +162,7 @@ code.uri { display:block; background: var(--panel2); border-radius: 10px; paddin
 <script>
 "use strict";
 /* ================= KONSTANTEN ================= */
-const LS_GAME = "hk-v3-game", LS_BEST = "hk-pwa-best", LS_AUTH = "hk-pwa-auth", LS_CID = "hk-pwa-clientid", LS_FILT = "hk-v3-filt";
+const LS_GAME = "hk-v3-game", LS_BEST = "hk-pwa-best", LS_AUTH = "hk-pwa-auth", LS_CID = "hk-pwa-clientid", LS_FILT = "hk-v3-filt", LS_SWIPE = "hk-swipe-v1";
 const SCOPES = "user-modify-playback-state user-read-playback-state";
 const COLORS = ["#ff3e8a","#38d0ff","#a3e635","#ffb02e","#b78bff","#ff6a4d"];
 const EPOCHS = ["Barock","Klassik","Romantik","Moderne","Zeitgenössisch"];
@@ -163,6 +171,13 @@ let SONGS = [];
 let S = null;
 let screen = 'home';
 let playState = { playing: false, error: '' };
+
+/* Swipe-Pool: neue Kandidaten, die ins Spiel geswipet werden */
+let POOL = [];
+let BASEKEYS = new Set();   // Keys der Songs aus songs.json (ohne angenommene)
+let SW = { accepted: [], aside: [], rejected: [] };
+try { const sw = localStorage.getItem(LS_SWIPE); if (sw) SW = Object.assign({ accepted: [], aside: [], rejected: [] }, JSON.parse(sw)); } catch(e){}
+function saveSw(){ try { localStorage.setItem(LS_SWIPE, JSON.stringify(SW)); } catch(e){} }
 
 try { const s = localStorage.getItem(LS_GAME); if (s) S = JSON.parse(s); } catch(e){}
 function save(){ try { localStorage.setItem(LS_GAME, JSON.stringify(S)); } catch(e){} }
@@ -179,6 +194,16 @@ async function loadData(){
     SONGS = await r.json();
   } catch(e) { SONGS = []; }
 }
+async function loadPool(){
+  try {
+    const r = await fetch('pool-neu.json?v=' + Date.now());
+    POOL = await r.json();
+  } catch(e) { POOL = []; }
+}
+function applyAccepted(){
+  const have = new Set(SONGS.map(skey));
+  for (const s of SW.accepted) { if (!have.has(skey(s))) { SONGS.push(s); have.add(skey(s)); } }
+}
 function allComposers(){ return [...new Set(SONGS.map(s => s.c))].sort((a,b)=>a.localeCompare(b,'de')); }
 function allGenres(){ return [...new Set(SONGS.map(s => s.g))].sort((a,b)=>a.localeCompare(b,'de')); }
 // Filter: null = alle ausgewählt
@@ -193,7 +218,146 @@ function filterMatch(s){
 }
 function filteredSongs(){ return SONGS.filter(s => s.u && filterMatch(s)); }
 
-/* ================= GITHUB entfernt – Songs kommen read-only aus songs.json ================= */
+/* ================= SWIPE (neue Songs ins Spiel holen) ================= */
+function decidedKeys(){
+  const d = new Set();
+  for (const s of SW.accepted) d.add(skey(s));
+  for (const s of SW.aside) d.add(skey(s));
+  for (const s of SW.rejected) d.add(skey(s));
+  return d;
+}
+function poolTotal(){ return POOL.filter(s => s.u && !BASEKEYS.has(skey(s))).length; }
+function poolQueue(){
+  const d = decidedKeys();
+  return POOL.filter(s => s.u && !BASEKEYS.has(skey(s)) && !d.has(skey(s)));
+}
+function swipeSubtitle(){
+  const total = poolTotal();
+  if (!total) return 'Kandidaten-Pool leer – pool-neu.json fehlt';
+  const rem = poolQueue().length;
+  if (!rem) return 'Alle ' + total + ' durch · ' + SW.accepted.length + ' übernommen';
+  return rem + ' neue Kandidaten warten' + (SW.accepted.length ? ' · ' + SW.accepted.length + ' schon rein' : '');
+}
+function playSwipe(){ const s = poolQueue()[0]; if (s) playUrl(s.u); }
+function swipeAccept(){
+  const s = poolQueue()[0]; if (!s) return;
+  SW.accepted.push(s);
+  if (!SONGS.some(x => skey(x) === skey(s))) SONGS.push(s);
+  saveSw(); stopPlayback(); render();
+}
+function swipeAside(){ const s = poolQueue()[0]; if (!s) return; SW.aside.push(s); saveSw(); stopPlayback(); render(); }
+function swipeReject(){ const s = poolQueue()[0]; if (!s) return; SW.rejected.push(s); saveSw(); stopPlayback(); render(); }
+function swipeUndo(){
+  // letzte Entscheidung zurücknehmen (nach Zeitpunkt)
+  const last = [ ['accepted', SW.accepted], ['aside', SW.aside], ['rejected', SW.rejected] ]
+    .filter(x => x[1].length);
+  if (!last.length) return;
+  // einfache Variante: aus der zuletzt befüllten nicht-leeren Liste entfernen
+  let target = null;
+  if (SW.accepted.length) target = SW.accepted;
+  if (SW.aside.length && (!target || true)) {}
+  // stattdessen: entferne den zuletzt hinzugefügten Eintrag aller Listen anhand Länge nicht möglich –
+  // wir nehmen einfach aus 'rejected', dann 'aside', dann 'accepted'
+  if (SW.rejected.length) SW.rejected.pop();
+  else if (SW.aside.length) SW.aside.pop();
+  else if (SW.accepted.length) { const s = SW.accepted.pop(); const i = SONGS.findIndex(x => skey(x) === skey(s)); if (i >= 0 && BASEKEYS.size && !BASEKEYS.has(skey(s))) SONGS.splice(i, 1); }
+  saveSw(); render();
+}
+function resetSwipe(){
+  if (!confirm('Swipe-Fortschritt zurücksetzen? Angenommene und beiseitegelegte Songs werden verworfen.')) return;
+  SW = { accepted: [], aside: [], rejected: [] };
+  saveSw();
+  render();
+}
+function renderSwipe(){
+  const s = poolQueue()[0];
+  const a = connected();
+  let html = '<div class="topbar"><h1 style="font-size:17px">Songs <span class="neon">swipen</span></h1>' +
+    '<button class="menu-btn" onclick="quitSwipe()">Menü</button></div>';
+
+  if (!poolTotal()) {
+    app.innerHTML = html + '<div class="card-panel"><p class="setuplist">Der Kandidaten-Pool ist leer. Lade <b>pool-neu.json</b> ins Repo, dann erscheinen hier neue Songs zum Swipen.</p>' +
+      '<button class="bigbtn ghost" onclick="go(\'home\')">Zurück</button></div>';
+    return;
+  }
+
+  html += '<div class="swipebar">' +
+    '<div class="pill"><b style="color:var(--green)">' + SW.accepted.length + '</b><span>in Liste</span></div>' +
+    '<div class="pill"><b style="color:#b78bff">' + SW.aside.length + '</b><span>beiseite</span></div>' +
+    '<div class="pill"><b style="color:var(--muted)">' + poolQueue().length + '</b><span>offen</span></div></div>';
+
+  if (!s) {
+    html += '<div class="card-panel"><p class="setuplist"><b>Alles durchgeswipet!</b> ' +
+      SW.accepted.length + ' Songs kommen in die große Liste, ' + SW.aside.length + ' liegen beiseite.</p>' +
+      exportButtonsHtml() +
+      '<button class="bigbtn ghost" onclick="go(\'home\')">Zurück zum Menü</button></div>';
+    app.innerHTML = html;
+    return;
+  }
+
+  html += '<div class="swipecard">' +
+    '<div class="reveal-year" style="color:var(--accent)">' + s.y + '</div>' +
+    '<div class="reveal-title">' + esc(s.t) + '</div>' +
+    '<div class="reveal-comp">' + esc(s.c) + '</div>' +
+    '<div class="tagline">' + esc(s.g) + ' · ' + era(s.y) + '</div>';
+  if (a) {
+    html += '<div class="eq ' + (playState.playing ? '' : 'paused') + '"><i></i><i></i><i></i><i></i><i></i></div>' +
+      '<div class="pctrl">' +
+        '<button class="main" onclick="' + (playState.playing ? 'pauseResume()' : 'playSwipe()') + '">' + (playState.playing ? '❚❚' : '▶') + '</button>' +
+        '<button onclick="playSwipe()">Neu</button>' +
+      '</div>' +
+      (playState.error ? '<div class="perr">' + esc(playState.error) + '</div>' : '');
+  } else {
+    html += '<div><a class="playlink" href="' + s.u + '" target="_blank" rel="noopener">In Spotify anhören</a></div>' +
+      '<div class="mysterytxt">Tipp: Spotify verbinden, dann spielt der Song direkt in der App.</div>';
+  }
+  html += '</div>';
+
+  html += '<div class="actions">' +
+    '<button class="bigbtn green" onclick="swipeAccept()">✓ In die große Liste</button>' +
+    '<div class="doubtrow" style="--tc:#b78bff">' +
+      '<button style="border-color:#b78bff;color:#b78bff" onclick="swipeAside()">Beiseite legen</button>' +
+      '<button style="border-color:#ff5c78;color:#ff5c78" onclick="swipeReject()">✕ Raus</button>' +
+    '</div>' +
+    '<button class="bigbtn ghost" onclick="swipeUndo()">Rückgängig</button>' +
+    '</div>';
+  html += '<p class="hint">Angenommene Songs sind sofort im Spiel spielbar. Zum dauerhaften Speichern unten die Liste exportieren.</p>';
+  if (SW.accepted.length || SW.aside.length) {
+    html += '<div class="card-panel">' + exportButtonsHtml() + '</div>';
+  }
+  app.innerHTML = html;
+}
+function bigListJson(){
+  const have = new Set(); const out = [];
+  for (const s of SONGS) { const k = skey(s); if (have.has(k)) continue; have.add(k); out.push({ t: s.t, c: s.c, y: s.y, u: s.u, g: s.g }); }
+  return JSON.stringify(out);
+}
+function asideJson(){ return JSON.stringify(SW.aside.map(s => ({ t: s.t, c: s.c, y: s.y, u: s.u, g: s.g }))); }
+function download(name, text){
+  const b = new Blob([text], { type: 'application/json' });
+  const url = URL.createObjectURL(b);
+  const a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+function copyText(text){
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => alert('Kopiert! Jetzt bei GitHub in die Datei einfügen.')).catch(() => alert('Kopieren nicht möglich – nutze den Download.'));
+  } else alert('Kopieren nicht möglich – nutze den Download.');
+}
+function exportBig(){ download('songs.json', bigListJson()); }
+function copyBig(){ copyText(bigListJson()); }
+function exportAside(){ download('beiseite.json', asideJson()); }
+function copyAside(){ copyText(asideJson()); }
+function exportButtonsHtml(){
+  return '<label class="lbl">Große Liste (songs.json)</label>' +
+    '<p class="hint" style="text-align:left;margin-top:0">Enthält deine bisherigen Songs + alle angenommenen (' + SW.accepted.length + '). Herunterladen und im Repo als <b>songs.json</b> hochladen.</p>' +
+    '<button class="bigbtn" onclick="exportBig()">songs.json herunterladen</button>' +
+    '<button class="bigbtn ghost" onclick="copyBig()">In Zwischenablage kopieren</button>' +
+    (SW.aside.length ? '<label class="lbl">Beiseite-Liste (' + SW.aside.length + ')</label>' +
+      '<button class="bigbtn ghost" onclick="exportAside()">beiseite.json herunterladen</button>' +
+      '<button class="bigbtn ghost" onclick="copyAside()">Beiseite-Liste kopieren</button>' : '') +
+    '<button class="bigbtn ghost" onclick="resetSwipe()" style="border-color:#5a2740;color:#ff5c78">Swipe zurücksetzen</button>';
+}
 
 /* ================= SPOTIFY AUTH (PKCE) ================= */
 function getAuth(){ try { return JSON.parse(localStorage.getItem(LS_AUTH)) || null; } catch(e){ return null; } }
@@ -309,6 +473,8 @@ function renderHome(){
       '<div class="tx"><b>Solo · Klassisch</b><span>Ziel-Kartenzahl erreichen</span></div></div>' +
     '<div class="mode" onclick="go(\'setup-party\')"><div class="ic" style="background:linear-gradient(135deg,#a3e635,#22b573)">2+</div>' +
       '<div class="tx"><b>Party</b><span>2–6 Teams an einem Gerät, mit Anzweifeln</span></div></div>' +
+    '<div class="mode" onclick="go(\'swipe\')"><div class="ic" style="background:linear-gradient(135deg,#b78bff,#7a5cff)">↔</div>' +
+      '<div class="tx"><b>Neue Songs swipen</b><span>'+swipeSubtitle()+'</span></div></div>' +
     '<div class="spotify-chip" onclick="go(\'settings\')"><div class="st '+(a?'on':'off')+'"></div>' +
       (a ? '<span>Spotify verbunden</span><span class="lbl2">– Songs starten automatisch</span>'
          : '<span>Spotify nicht verbunden</span><span class="lbl2">– einrichten für Auto-Playback</span>') + '</div>';
@@ -408,6 +574,7 @@ function startParty(){
 function render(){
   if (screen === 'home') { renderHome(); return; }
   if (screen === 'settings') { renderSettings(); return; }
+  if (screen === 'swipe') { renderSwipe(); return; }
   if (screen === 'setup-endless') { renderSetupEndless(); return; }
   if (screen === 'setup-classic') { renderSetupClassic(); return; }
   if (screen === 'setup-party') { renderSetupParty(); return; }
@@ -613,6 +780,7 @@ function renderGameover(){
   }
 }
 function quitGame(){ if (confirm('Zurück ins Menü? Das Spiel bleibt gespeichert.')) { stopPlayback(); go('home'); } }
+function quitSwipe(){ stopPlayback(); go('home'); }
 function quitToHome(){ S = null; try { localStorage.removeItem(LS_GAME); } catch(e){} go('home'); }
 
 /* ================= EINSTELLUNGEN ================= */
@@ -643,7 +811,9 @@ function disconnect(){ setAuth(null); render(); }
 /* ================= START ================= */
 if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js').catch(()=>{}); }
 app.innerHTML = '<h1>HITSTER <span class="neon">KLASSIK</span></h1><p class="hint" style="text-align:left;margin-top:14px">Lade Karten…</p>';
-handleRedirect().then(loadData).then(() => {
+handleRedirect().then(loadData).then(loadPool).then(() => {
+  BASEKEYS = new Set(SONGS.map(skey));
+  applyAccepted();
   if (S && S.phase && S.phase !== 'gameover') screen = 'game';
   render();
 });
