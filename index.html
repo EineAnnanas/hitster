@@ -165,7 +165,7 @@ code.uri { display:block; background: var(--panel2); border-radius: 10px; paddin
 const LS_GAME = "hk-v3-game", LS_BEST = "hk-pwa-best", LS_AUTH = "hk-pwa-auth", LS_CID = "hk-pwa-clientid", LS_FILT = "hk-v3-filt", LS_SWIPE = "hk-swipe-v1";
 const SCOPES = "user-modify-playback-state user-read-playback-state";
 const COLORS = ["#ff3e8a","#38d0ff","#a3e635","#ffb02e","#b78bff","#ff6a4d"];
-const EPOCHS = ["Barock","Klassik","Romantik","Moderne","Zeitgenössisch"];
+const EPOCHS = ["Renaissance","Barock","Klassik","Romantik","Moderne","Zeitgenössisch"];
 
 let SONGS = [];
 let S = null;
@@ -185,7 +185,7 @@ function esc(s){ return String(s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;
 const app = document.getElementById('app');
 const $ = id => document.getElementById(id);
 function skey(s){ return (s.t + '|' + s.c).toLowerCase(); }
-function era(y){ return y < 1750 ? "Barock" : y < 1820 ? "Klassik" : y < 1900 ? "Romantik" : y < 1950 ? "Moderne" : "Zeitgenössisch"; }
+function era(y){ return y < 1600 ? "Renaissance" : y < 1750 ? "Barock" : y < 1820 ? "Klassik" : y < 1900 ? "Romantik" : y < 1950 ? "Moderne" : "Zeitgenössisch"; }
 
 /* ================= DATEN + FILTER ================= */
 async function loadData(){
@@ -509,7 +509,7 @@ function filterHtml(){
 }
 function yearChartHtml(){
   const songs = filteredSongs();
-  const START = 1600, STEP = 10, NB = 43; // 1600..2030 in Jahrzehnten
+  const START = 1450, STEP = 10, NB = 58; // 1600..2030 in Jahrzehnten
   const bins = new Array(NB).fill(0);
   let ymin = Infinity, ymax = -Infinity;
   for (const s of songs){
@@ -531,7 +531,7 @@ function yearChartHtml(){
     bars += '<rect x="' + (x + 0.6).toFixed(1) + '" y="' + (axisY - h).toFixed(1) + '" width="' + (bw - 1.2).toFixed(1) + '" height="' + h.toFixed(1) + '" rx="1.5" fill="var(--accent)"><title>' + (START + i * STEP) + 'er: ' + c + '</title></rect>';
   }
   let ticks = '';
-  for (let yr = 1600; yr <= 2000; yr += 100){
+  for (let yr = 1500; yr <= 2000; yr += 100){
     const x = padL + ((yr - START) / STEP) * bw + bw / 2;
     ticks += '<line x1="' + x.toFixed(1) + '" y1="' + axisY + '" x2="' + x.toFixed(1) + '" y2="' + (axisY + 4) + '" stroke="#4a4270" stroke-width="1"/>' +
       '<text x="' + x.toFixed(1) + '" y="' + (axisY + 16) + '" fill="var(--muted)" font-size="9" text-anchor="middle" font-weight="700">' + yr + '</text>';
