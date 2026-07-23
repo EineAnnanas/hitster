@@ -504,7 +504,46 @@ function filterHtml(){
     filterSection('Gattungen', 'g', allGenres(), gc) +
     filterSection('Epochen', 'e', EPOCHS.filter(e=>ec[e]), ec) +
     filterSection('Komponisten', 'c', allComposers(), cc) +
-    '<p class="hint" style="margin-top:10px"><b style="color:var(--text)">'+n+' Karten</b> im Stapel</p>';
+    '<p class="hint" style="margin-top:10px"><b style="color:var(--text)">'+n+' Karten</b> im Stapel</p>' +
+    yearChartHtml();
+}
+function yearChartHtml(){
+  const songs = filteredSongs();
+  const START = 1600, STEP = 10, NB = 43; // 1600..2030 in Jahrzehnten
+  const bins = new Array(NB).fill(0);
+  let ymin = Infinity, ymax = -Infinity;
+  for (const s of songs){
+    const y = s.y;
+    if (y < ymin) ymin = y; if (y > ymax) ymax = y;
+    let i = Math.floor((y - START) / STEP);
+    if (i < 0) i = 0; if (i >= NB) i = NB - 1;
+    bins[i]++;
+  }
+  const maxc = Math.max(1, ...bins);
+  const W = 360, H = 132, padL = 6, padR = 6, padT = 12, padB = 22;
+  const plotW = W - padL - padR, plotH = H - padT - padB, bw = plotW / NB;
+  const axisY = padT + plotH;
+  let bars = '';
+  for (let i = 0; i < NB; i++){
+    const c = bins[i]; if (!c) continue;
+    const h = (c / maxc) * plotH;
+    const x = padL + i * bw;
+    bars += '<rect x="' + (x + 0.6).toFixed(1) + '" y="' + (axisY - h).toFixed(1) + '" width="' + (bw - 1.2).toFixed(1) + '" height="' + h.toFixed(1) + '" rx="1.5" fill="var(--accent)"><title>' + (START + i * STEP) + 'er: ' + c + '</title></rect>';
+  }
+  let ticks = '';
+  for (let yr = 1600; yr <= 2000; yr += 100){
+    const x = padL + ((yr - START) / STEP) * bw + bw / 2;
+    ticks += '<line x1="' + x.toFixed(1) + '" y1="' + axisY + '" x2="' + x.toFixed(1) + '" y2="' + (axisY + 4) + '" stroke="#4a4270" stroke-width="1"/>' +
+      '<text x="' + x.toFixed(1) + '" y="' + (axisY + 16) + '" fill="var(--muted)" font-size="9" text-anchor="middle" font-weight="700">' + yr + '</text>';
+  }
+  const svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" style="display:block;height:auto">' +
+    '<text x="' + padL + '" y="9" fill="var(--muted)" font-size="8.5" font-weight="700">max ' + maxc + '</text>' +
+    '<line x1="' + padL + '" y1="' + axisY + '" x2="' + (W - padR) + '" y2="' + axisY + '" stroke="#3a3355" stroke-width="1"/>' +
+    bars + ticks + '</svg>';
+  const range = isFinite(ymin) ? (ymin + '–' + ymax) : '–';
+  return '<label class="lbl">Verteilung nach Jahr</label>' +
+    '<div style="background:var(--panel2);border:2px solid #3a3355;border-radius:14px;padding:10px 8px 4px;margin-top:6px">' +
+    svg + '<p class="hint" style="margin-top:4px">' + songs.length + ' Karten · ' + range + ' · je Balken ein Jahrzehnt</p></div>';
 }
 function toggleFilt(dim, val){
   const all = dim==='c' ? allComposers() : dim==='g' ? allGenres() : EPOCHS;
