@@ -1,119 +1,1045 @@
 [
-{"t": "Symphonie Nr. 9 \"Ode an die Freude\" (Finale)", "c": "Beethoven", "y": 1824, "g": "Symphonie", "u": "https://open.spotify.com/track/1QGBrfPE1KiLnUsrJv7J3P"},
-{"t": "Va, pensiero (Nabucco)", "c": "Verdi", "y": 1842, "g": "Gesang", "u": "https://open.spotify.com/track/6dMSazyuh8nVJ5QxmXj2Lq"},
-{"t": "Triumphmarsch (Aida)", "c": "Verdi", "y": 1871, "g": "Orchester", "u": "https://open.spotify.com/track/5g0V9pXhK2lDHtpyKpaTVV"},
-{"t": "La donna è mobile (Rigoletto)", "c": "Verdi", "y": 1851, "g": "Gesang", "u": "https://open.spotify.com/track/0ayRg4paWdfeTb5yOkaqTT"},
-{"t": "Dies irae (Requiem)", "c": "Verdi", "y": 1874, "g": "Gesang", "u": "https://open.spotify.com/track/2k7OppNF2Zls3HB9DNyzM4"},
-{"t": "Schwanensee - Scene (Akt II)", "c": "Tschaikowsky", "y": 1876, "g": "Orchester", "u": "https://open.spotify.com/track/2xizRhme7pYeITbH1NLLGt"},
-{"t": "Symphonie Nr. 6 \"Pathétique\" (Finale)", "c": "Tschaikowsky", "y": 1893, "g": "Symphonie", "u": "https://open.spotify.com/track/37Sx42ecraWiai21ZiW6se"},
-{"t": "Symphonie Nr. 41 \"Jupiter\" (Finale)", "c": "Mozart", "y": 1788, "g": "Symphonie", "u": "https://open.spotify.com/track/5jUPptP7W33wnpgtGnYc8t"},
-{"t": "Klavierkonzert Nr. 21 (Andante, Elvira Madigan)", "c": "Mozart", "y": 1785, "g": "Klavierkonzert", "u": "https://open.spotify.com/track/7k8CK6nlmIZpzsSNLndFpG"},
-{"t": "Wassermusik - Alla Hornpipe", "c": "Händel", "y": 1717, "g": "Orchester", "u": "https://open.spotify.com/track/5pjbdjby5FdI4rsBOFHFWE"},
-{"t": "O mio babbino caro (Gianni Schicchi)", "c": "Puccini", "y": 1918, "g": "Gesang", "u": "https://open.spotify.com/track/78k57V2uo6Sm72j1H7Ih14"},
-{"t": "Mars, der Kriegsbringer (Die Planeten)", "c": "Holst", "y": 1916, "g": "Orchester", "u": "https://open.spotify.com/track/490j4ROCVHlijhKyCLk5gS"},
-{"t": "Symphonie Nr. 2 \"Auferstehung\" (Finale)", "c": "Mahler", "y": 1894, "g": "Symphonie", "u": "https://open.spotify.com/track/31MxZhQkKeSEXNRBzPos1n"},
-{"t": "Valse triste", "c": "Sibelius", "y": 1904, "g": "Orchester", "u": "https://open.spotify.com/track/4Hr2Ijzjy3lXVtQWiS7O3L"},
-{"t": "Miserere mei, Deus", "c": "Allegri", "y": 1638, "g": "Gesang", "u": "https://open.spotify.com/track/1yColXUkf6Dq4swYpsgJRQ"},
-{"t": "Summertime (Porgy and Bess)", "c": "Gershwin", "y": 1935, "g": "Gesang", "u": "https://open.spotify.com/track/1NER6nw7tDYJvxYHjGFWNQ"},
-{"t": "Gloria in excelsis Deo (Gloria RV 589)", "c": "Vivaldi", "y": 1715, "g": "Gesang", "u": "https://open.spotify.com/track/5Txwlv081K39njx353jh7r"},
-{"t": "Grande Valse brillante Es-Dur op. 18", "c": "Chopin", "y": 1833, "g": "Klavier solo", "u": "https://open.spotify.com/track/7Fo7PmFuA11TCRwD2fOvtL"},
-{"t": "Suite bergamasque - Prélude", "c": "Debussy", "y": 1890, "g": "Klavier solo", "u": "https://open.spotify.com/track/7qTsSysXLXeb26Eny2FSUr"},
-{"t": "One Summer's Day (Chihiro)", "c": "Joe Hisaishi", "y": 2001, "g": "Klavier solo", "u": "https://open.spotify.com/track/0MuweuHQKWyu6GdgpRgAnN"},
-{"t": "Der Hölle Rache (Zauberflöte, Königin der Nacht)", "c": "Mozart", "y": 1791, "g": "Gesang", "u": "https://open.spotify.com/track/2IRMCtPrxmJwpyfCF8WcJA"},
-{"t": "Largo al factotum (Barbier von Sevilla)", "c": "Rossini", "y": 1816, "g": "Gesang", "u": "https://open.spotify.com/track/4U6jZREqjJE1444746hq4I"},
-{"t": "Jesus bleibet meine Freude (BWV 147)", "c": "Bach", "y": 1723, "g": "Gesang", "u": "https://open.spotify.com/track/5NbzzXzwd7ZgH8SSzlc4Dm"},
-{"t": "Rêverie", "c": "Debussy", "y": 1890, "g": "Klavier solo", "u": "https://open.spotify.com/track/16dK08KnMolT83HkhFqp1i"},
-{"t": "Liebestraum Nr. 3 As-Dur", "c": "Liszt", "y": 1850, "g": "Klavier solo", "u": "https://open.spotify.com/track/2u9VGZmVz7Rm01SfDgzcfA"},
-{"t": "Nocturne b-Moll op. 9 Nr. 1", "c": "Chopin", "y": 1830, "g": "Klavier solo", "u": "https://open.spotify.com/track/6mry9fDj4oTFudQAMRo1lV"},
-{"t": "Slawischer Tanz Nr. 8 g-Moll", "c": "Dvořák", "y": 1878, "g": "Orchester", "u": "https://open.spotify.com/track/1e0Yj4wm4Bem5uk3wf0qlT"},
-{"t": "Nussknacker - Russischer Tanz (Trepak)", "c": "Tschaikowsky", "y": 1892, "g": "Orchester", "u": "https://open.spotify.com/track/6dizSLXurP9SSOiiqVtxV0"},
-{"t": "Solveigs Lied (Peer Gynt)", "c": "Grieg", "y": 1875, "g": "Gesang", "u": "https://open.spotify.com/track/3h6uTDTbwT39fU1W0zV7Pd"},
-{"t": "Carmen - Les Toréadors", "c": "Bizet", "y": 1875, "g": "Orchester", "u": "https://open.spotify.com/track/4oUBEQJykZg3dEDZlaVxDA"},
-{"t": "Terpsichore – La Bourrée", "c": "Praetorius", "y": 1612, "g": "Kammermusik", "u": "https://open.spotify.com/track/12u6g5SJgx3RDUtaji9fc6"},
-{"t": "Terpsichore – Gavotte", "c": "Praetorius", "y": 1612, "g": "Kammermusik", "u": "https://open.spotify.com/track/3tCkwvtqGuSTD9mIqnkxPw"},
-{"t": "Terpsichore – Gaillarde", "c": "Caroubel", "y": 1612, "g": "Kammermusik", "u": "https://open.spotify.com/track/46M2S5pOg2c2GkWTkbw65w"},
-{"t": "Terpsichore – Pavane de Spaigne", "c": "Caroubel", "y": 1612, "g": "Kammermusik", "u": "https://open.spotify.com/track/3sacuoEtEYAlC8C1hWu2IO"},
-{"t": "Basse danse 'La Magdalena'", "c": "Attaingnant", "y": 1530, "g": "Kammermusik", "u": "https://open.spotify.com/track/46Z2sONzIQVCNwWJaFrvbm"},
-{"t": "Tourdion", "c": "Attaingnant", "y": 1530, "g": "Kammermusik", "u": "https://open.spotify.com/track/0WH6aGVm9dzdRIIZpOdSrG"},
-{"t": "Pavane", "c": "Attaingnant", "y": 1530, "g": "Kammermusik", "u": "https://open.spotify.com/track/25ZhHyCaX7UGBlmEfaziUE"},
-{"t": "Bransle d'Écosse", "c": "Arbeau", "y": 1589, "g": "Kammermusik", "u": "https://open.spotify.com/track/5LdaSGrgndJEdmL9nUfSOx"},
-{"t": "Branle Cassandre", "c": "Arbeau", "y": 1589, "g": "Kammermusik", "u": "https://open.spotify.com/track/5vBFsqRjC5XNxTHXtrzGqQ"},
-{"t": "Jouyssance vous donneray", "c": "Arbeau", "y": 1589, "g": "Kammermusik", "u": "https://open.spotify.com/track/3cuVjpwBYaQ279W7f3NL9Y"},
-{"t": "Ein ser guter Hoftantz", "c": "Neusidler", "y": 1536, "g": "Gitarre", "u": "https://open.spotify.com/track/1mbM8CkQVMzm9OGFPtskCx"},
-{"t": "Der Wäscherin Tanz", "c": "Neusidler", "y": 1536, "g": "Gitarre", "u": "https://open.spotify.com/track/5zBEauh8r5N1nroTKIBtdH"},
-{"t": "Ich klag den Tag", "c": "Neusidler", "y": 1536, "g": "Gitarre", "u": "https://open.spotify.com/track/049gPp3OlVx0So47oK2xn4"},
-{"t": "Allemande (Danserye)", "c": "Susato", "y": 1551, "g": "Kammermusik", "u": "https://open.spotify.com/track/52RDjhKgVjb0aAT8HiVMg9"},
-{"t": "Ballo francese", "c": "Mainerio", "y": 1578, "g": "Kammermusik", "u": "https://open.spotify.com/track/1hZ9YLkIYyecuBZg7FiQaI"},
-{"t": "Ce fut le jour", "c": "Chardavoine", "y": 1576, "g": "Gesang", "u": "https://open.spotify.com/track/0xLySs5CGyzuLhPvHdDurR"},
-{"t": "Innsbruck, ich muss dich lassen", "c": "Isaac", "y": 1495, "g": "Gesang", "u": "https://open.spotify.com/track/0zg3PwhUxTPVaCCzE4Po2R"},
-{"t": "Carmen in Fa", "c": "Isaac", "y": 1501, "g": "Kammermusik", "u": "https://open.spotify.com/track/4aeFVDQCZdJPZxrWnLEDoW"},
-{"t": "Quis dabit capiti meo aquam (Lamentatio)", "c": "Isaac", "y": 1492, "g": "Gesang", "u": "https://open.spotify.com/track/4EaAn6VXy9uLPfzOcNUerM"},
-{"t": "Alla battaglia", "c": "Isaac", "y": 1488, "g": "Kammermusik", "u": "https://open.spotify.com/track/2EheHaXcUfM97ul2MTW2ZC"},
-{"t": "Mistresse Nichols Almand", "c": "Dowland", "y": 1600, "g": "Gitarre", "u": "https://open.spotify.com/track/71U9tzd8JsWLk7HoCV1ICy"},
-{"t": "The Shoemaker's Wife (A Toy)", "c": "Dowland", "y": 1600, "g": "Gitarre", "u": "https://open.spotify.com/track/2k2Hky9hJbd6E0F1no47sG"},
-{"t": "The Frog Galliard", "c": "Dowland", "y": 1600, "g": "Gitarre", "u": "https://open.spotify.com/track/3vAlgcCLgVr6VpYzIdwffA"},
-{"t": "Aus tiefer Not schrei ich zu dir", "c": "Walther", "y": 1712, "g": "Orgel", "u": "https://open.spotify.com/track/59vBRzgCv9iqwmg5ZKx3r6"},
-{"t": "Erzürne dich nicht (Psalm 37)", "c": "Stoltzer", "y": 1526, "g": "Gesang", "u": "https://open.spotify.com/track/36eK75Hrv5NZ194r8GefQ8"},
-{"t": "Entlaubet ist der Walde", "c": "Stoltzer", "y": 1520, "g": "Gesang", "u": "https://open.spotify.com/track/5Pm3O0ZLGW1K7mjAcmpWVA"},
-{"t": "Requiem (Missa pro defunctis)", "c": "Obrecht", "y": 1500, "g": "Gesang", "u": "https://open.spotify.com/track/0b6JekIg7zCg4fL1KIMwom"},
-{"t": "Missa Fortuna desperata – Osanna", "c": "Obrecht", "y": 1496, "g": "Gesang", "u": "https://open.spotify.com/track/1D3jBdVg9vAKp54LzCYbis"},
-{"t": "Jamais, jamais, jamais", "c": "Mouton", "y": 1510, "g": "Gesang", "u": "https://open.spotify.com/track/4ByOOksgID9SPVPrXHuklk"},
-{"t": "Messe de Nostre Dame – Kyrie", "c": "Machaut", "y": 1360, "g": "Gesang", "u": "https://open.spotify.com/track/6LOSug91saikogFZXKfEme"},
-{"t": "Douce dame jolie", "c": "Machaut", "y": 1350, "g": "Gesang", "u": "https://open.spotify.com/track/2T3ZCmTGWVqSaDLPKQEKyO"},
-{"t": "Ma fin est mon commencement", "c": "Machaut", "y": 1360, "g": "Gesang", "u": "https://open.spotify.com/track/3BOcMEyOY6VgsYRgwW7i1Q"},
-{"t": "Messe de Nostre Dame – Agnus Dei", "c": "Machaut", "y": 1360, "g": "Gesang", "u": "https://open.spotify.com/track/3AJ4cIXFV7esfGQ3xTtpqN"},
-{"t": "Rose, liz, printemps, verdure", "c": "Machaut", "y": 1350, "g": "Gesang", "u": "https://open.spotify.com/track/50HnYaj5auCwRATXYgtCpe"},
-{"t": "Puis qu'en oubli sui de vous", "c": "Machaut", "y": 1360, "g": "Gesang", "u": "https://open.spotify.com/track/36S3R6uowjRPelZjh9jysk"},
-{"t": "Hoquetus David", "c": "Machaut", "y": 1364, "g": "Kammermusik", "u": "https://open.spotify.com/track/2v1pJ704uKyldMAVckT9tm"},
-{"t": "Moro, lasso, al mio duolo (Madrigale Buch 6)", "c": "Gesualdo", "y": 1611, "g": "Gesang", "u": "https://open.spotify.com/track/1SUoTUkv6fdkp3suVMJq5x"},
-{"t": "Io parto e non più dissi (Buch 6)", "c": "Gesualdo", "y": 1611, "g": "Gesang", "u": "https://open.spotify.com/track/2O9xvb7fMcWzCpCycTrfzJ"},
-{"t": "Beltà, poi che t'assenti (Buch 6)", "c": "Gesualdo", "y": 1611, "g": "Gesang", "u": "https://open.spotify.com/track/3AIQR4L5q8OCjPC9E0pUEv"},
-{"t": "O vos omnes (Tenebrae Responsorien)", "c": "Gesualdo", "y": 1611, "g": "Gesang", "u": "https://open.spotify.com/track/7JmCIIdspvW6H7FggVzPb9"},
-{"t": "Tristis est anima mea (Tenebrae)", "c": "Gesualdo", "y": 1611, "g": "Gesang", "u": "https://open.spotify.com/track/4P8V3vCiUiL6DVSH6ggk8a"},
-{"t": "Luci serene e chiare (Buch 4)", "c": "Gesualdo", "y": 1596, "g": "Gesang", "u": "https://open.spotify.com/track/3xNEGVT1j0YyAkE3tRSbj6"},
-{"t": "Dolcissima mia vita (Buch 5)", "c": "Gesualdo", "y": 1611, "g": "Gesang", "u": "https://open.spotify.com/track/6SvUMxsNOZS2PTK88Yncnf"},
-{"t": "L'Orfeo – Toccata", "c": "Monteverdi", "y": 1607, "g": "Orchester", "u": "https://open.spotify.com/track/3bsGu9uiwqybcfXD4zKYmf"},
-{"t": "Marienvesper – Dixit Dominus", "c": "Monteverdi", "y": 1610, "g": "Gesang", "u": "https://open.spotify.com/track/4dFFrdxGbbq6GQeVB2nTPw"},
-{"t": "Lamento d'Arianna (Lasciatemi morire)", "c": "Monteverdi", "y": 1608, "g": "Gesang", "u": "https://open.spotify.com/track/3WcomUseVZ2XRddmCPbCkO"},
-{"t": "Zefiro torna", "c": "Monteverdi", "y": 1632, "g": "Gesang", "u": "https://open.spotify.com/track/5EiksbNmMRoPJSWPlS55bT"},
-{"t": "Il combattimento di Tancredi e Clorinda", "c": "Monteverdi", "y": 1624, "g": "Gesang", "u": "https://open.spotify.com/track/1WXh8GrdnD9czdw72WhReg"},
-{"t": "L'incoronazione di Poppea – Pur ti miro", "c": "Monteverdi", "y": 1643, "g": "Gesang", "u": "https://open.spotify.com/track/5NinL2jNwjeRpHwTFeRSv9"},
-{"t": "Cruda Amarilli (Madrigale Buch 5)", "c": "Monteverdi", "y": 1605, "g": "Gesang", "u": "https://open.spotify.com/track/5ZW9T5SVMYo8t2W9kni1tp"},
-{"t": "Jauchzet dem Herren, alle Welt (Psalm 100)", "c": "Schütz", "y": 1619, "g": "Gesang", "u": "https://open.spotify.com/track/16FLk34YVxwuPdQ4EJTSkv"},
-{"t": "O bone, o dulcis, o benigne Jesu (Cantiones Sacrae)", "c": "Schütz", "y": 1625, "g": "Gesang", "u": "https://open.spotify.com/track/4AxzSKlzbVbWBEk2rjW1E7"},
-{"t": "Musikalische Exequien – Herr, wenn ich nur dich habe", "c": "Schütz", "y": 1636, "g": "Gesang", "u": "https://open.spotify.com/track/40h8f9xmXFzpjboCFJ4EFf"},
-{"t": "Also hat Gott die Welt geliebt (Geistliche Chormusik)", "c": "Schütz", "y": 1648, "g": "Gesang", "u": "https://open.spotify.com/track/0MyhLE7VWqoZrmTfCvaaVV"},
-{"t": "Selig sind die Toten (Geistliche Chormusik)", "c": "Schütz", "y": 1648, "g": "Gesang", "u": "https://open.spotify.com/track/60ZPlN64jBNf1O1U16g83W"},
-{"t": "Saul, Saul, was verfolgst du mich (Symphoniae Sacrae III)", "c": "Schütz", "y": 1650, "g": "Gesang", "u": "https://open.spotify.com/track/78TiBuSicJKdPWTjBmqYbA"},
-{"t": "Weihnachtshistorie", "c": "Schütz", "y": 1660, "g": "Gesang", "u": "https://open.spotify.com/track/547WY6yaTPHiQugzTMU944"},
-{"t": "Membra Jesu Nostri – Ad ubera portabimini", "c": "Buxtehude", "y": 1680, "g": "Gesang", "u": "https://open.spotify.com/track/7qpq6iJ4ikHTWmHI6kuRdS"},
-{"t": "Toccata F-Dur BuxWV 156", "c": "Buxtehude", "y": 1683, "g": "Orgel", "u": "https://open.spotify.com/track/5b0zOyPlUvVqo9RKvf0QIX"},
-{"t": "Passacaglia d-Moll BuxWV 161", "c": "Buxtehude", "y": 1684, "g": "Orgel", "u": "https://open.spotify.com/track/0JfugWHTPWAIYefSHJZhxp"},
-{"t": "Praeludium g-Moll BuxWV 149", "c": "Buxtehude", "y": 1685, "g": "Orgel", "u": "https://open.spotify.com/track/6ZlvAfPPeNOORiq7EvyoYl"},
-{"t": "Ciacona e-Moll BuxWV 160", "c": "Buxtehude", "y": 1686, "g": "Orgel", "u": "https://open.spotify.com/track/53LtMr9RxsPalVhhJuc4Uo"},
-{"t": "Praeludium e-Moll BuxWV 143", "c": "Buxtehude", "y": 1688, "g": "Orgel", "u": "https://open.spotify.com/track/256cAHyo9jnoFEFwKDkSqB"},
-{"t": "Praeludium C-Dur BuxWV 138", "c": "Buxtehude", "y": 1690, "g": "Orgel", "u": "https://open.spotify.com/track/0zkebO2yMObgsR4U3wyvKl"},
-{"t": "Tannhäuser – Ouvertüre", "c": "Wagner", "y": 1845, "g": "Orchester", "u": "https://open.spotify.com/track/5ruGgyGrqInlwSJpEpC9oJ"},
-{"t": "Lohengrin – Treulich geführt (Brautchor)", "c": "Wagner", "y": 1850, "g": "Gesang", "u": "https://open.spotify.com/track/1FitymoxWIlGYUa3HruVzK"},
-{"t": "Die Meistersinger von Nürnberg – Vorspiel", "c": "Wagner", "y": 1868, "g": "Orchester", "u": "https://open.spotify.com/track/2AdrGrbK1zisq3lAgpLVO7"},
-{"t": "Siegfried-Idyll", "c": "Wagner", "y": 1870, "g": "Orchester", "u": "https://open.spotify.com/track/7KzDJlvqcwpv5C0n8sbkKz"},
-{"t": "Der fliegende Holländer – Ouvertüre", "c": "Wagner", "y": 1843, "g": "Orchester", "u": "https://open.spotify.com/track/1XIusBHgEQ1XU7cP0vSlyu"},
-{"t": "La Bohème – Che gelida manina", "c": "Puccini", "y": 1896, "g": "Gesang", "u": "https://open.spotify.com/track/0TeMe9q0MwYPTvYvhjTlUw"},
-{"t": "La Bohème – Sì, mi chiamano Mimì", "c": "Puccini", "y": 1896, "g": "Gesang", "u": "https://open.spotify.com/track/1YT1SmwIfoIk0BYX0SMKp0"},
-{"t": "Tosca – E lucevan le stelle", "c": "Puccini", "y": 1900, "g": "Gesang", "u": "https://open.spotify.com/track/4vDodVdvTxkl77EitvEzCP"},
-{"t": "Tosca – Vissi d'arte", "c": "Puccini", "y": 1900, "g": "Gesang", "u": "https://open.spotify.com/track/3Cry7dR7x1o9pVj0mABbKs"},
-{"t": "Madama Butterfly – Un bel dì vedremo", "c": "Puccini", "y": 1904, "g": "Gesang", "u": "https://open.spotify.com/track/3hpJpleLIWeUSYGcbbTQuj"},
-{"t": "La Traviata – Brindisi 'Libiamo ne' lieti calici'", "c": "Verdi", "y": 1853, "g": "Gesang", "u": "https://open.spotify.com/track/5qbug90TS9RaY01GhRsuh3"},
-{"t": "Il Trovatore – Coro di zingari (Anvil Chorus)", "c": "Verdi", "y": 1853, "g": "Gesang", "u": "https://open.spotify.com/track/0jDYmdqoqoZ7bTkHrlE7GT"},
-{"t": "Aida – Celeste Aida", "c": "Verdi", "y": 1871, "g": "Gesang", "u": "https://open.spotify.com/track/0aQiqmn0V5CZqQM7fFToha"},
-{"t": "La forza del destino – Ouvertüre", "c": "Verdi", "y": 1862, "g": "Orchester", "u": "https://open.spotify.com/track/6592Tp9Q88mkP7QqFRn7SV"},
-{"t": "Carmen – Toreador-Lied (Votre toast)", "c": "Bizet", "y": 1875, "g": "Gesang", "u": "https://open.spotify.com/track/2lGThJ9GK9ugarKkVAN58b"},
-{"t": "L'Arlésienne – Farandole", "c": "Bizet", "y": 1872, "g": "Orchester", "u": "https://open.spotify.com/track/4EOvzzJp0Z7VVmdKocioHd"},
-{"t": "Les pêcheurs de perles – Au fond du temple saint", "c": "Bizet", "y": 1863, "g": "Gesang", "u": "https://open.spotify.com/track/6N2QRUQhIVqE9deWQxCniK"},
-{"t": "Les Contes d'Hoffmann – Barcarolle (Belle nuit)", "c": "Offenbach", "y": 1881, "g": "Gesang", "u": "https://open.spotify.com/track/4gdI4bwrVzzquvgXQGFS0M"},
-{"t": "Orphée aux enfers – Ouvertüre", "c": "Offenbach", "y": 1858, "g": "Orchester", "u": "https://open.spotify.com/track/1pmwBK946KTPe7ZGLSVsK4"},
-{"t": "Les Contes d'Hoffmann – Les oiseaux dans la charmille (Olympia)", "c": "Offenbach", "y": 1881, "g": "Gesang", "u": "https://open.spotify.com/track/3yzAU86O09fpqmWGZditIh"},
-{"t": "La belle Hélène – Ouvertüre", "c": "Offenbach", "y": 1864, "g": "Orchester", "u": "https://open.spotify.com/track/6gNzBIXlHhCihCyAVcF6Ys"},
-{"t": "Aufforderung zum Tanz", "c": "Weber", "y": 1819, "g": "Klavier solo", "u": "https://open.spotify.com/track/3zEX5F9lwUXByhDMmxeTSS"},
-{"t": "Klarinettenkonzert Nr. 1 f-Moll (1. Satz)", "c": "Weber", "y": 1811, "g": "Konzert (andere)", "u": "https://open.spotify.com/track/4a18qBwCldSTtjaEexvZ0E"}
+{
+"t": "Symphonie Nr. 9 \"Ode an die Freude\" (Finale)",
+"c": "Beethoven",
+"y": 1824,
+"g": "Symphonie",
+"u": "https://open.spotify.com/track/1QGBrfPE1KiLnUsrJv7J3P"
+},
+{
+"t": "Va, pensiero (Nabucco)",
+"c": "Verdi",
+"y": 1842,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/6dMSazyuh8nVJ5QxmXj2Lq"
+},
+{
+"t": "Triumphmarsch (Aida)",
+"c": "Verdi",
+"y": 1871,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/5g0V9pXhK2lDHtpyKpaTVV"
+},
+{
+"t": "La donna è mobile (Rigoletto)",
+"c": "Verdi",
+"y": 1851,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/0ayRg4paWdfeTb5yOkaqTT"
+},
+{
+"t": "Dies irae (Requiem)",
+"c": "Verdi",
+"y": 1874,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/2k7OppNF2Zls3HB9DNyzM4"
+},
+{
+"t": "Schwanensee - Scene (Akt II)",
+"c": "Tschaikowsky",
+"y": 1876,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/2xizRhme7pYeITbH1NLLGt"
+},
+{
+"t": "Symphonie Nr. 6 \"Pathétique\" (Finale)",
+"c": "Tschaikowsky",
+"y": 1893,
+"g": "Symphonie",
+"u": "https://open.spotify.com/track/37Sx42ecraWiai21ZiW6se"
+},
+{
+"t": "Symphonie Nr. 41 \"Jupiter\" (Finale)",
+"c": "Mozart",
+"y": 1788,
+"g": "Symphonie",
+"u": "https://open.spotify.com/track/5jUPptP7W33wnpgtGnYc8t"
+},
+{
+"t": "Klavierkonzert Nr. 21 (Andante, Elvira Madigan)",
+"c": "Mozart",
+"y": 1785,
+"g": "Klavierkonzert",
+"u": "https://open.spotify.com/track/7k8CK6nlmIZpzsSNLndFpG"
+},
+{
+"t": "Wassermusik - Alla Hornpipe",
+"c": "Händel",
+"y": 1717,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/5pjbdjby5FdI4rsBOFHFWE"
+},
+{
+"t": "O mio babbino caro (Gianni Schicchi)",
+"c": "Puccini",
+"y": 1918,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/78k57V2uo6Sm72j1H7Ih14"
+},
+{
+"t": "Mars, der Kriegsbringer (Die Planeten)",
+"c": "Holst",
+"y": 1916,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/490j4ROCVHlijhKyCLk5gS"
+},
+{
+"t": "Symphonie Nr. 2 \"Auferstehung\" (Finale)",
+"c": "Mahler",
+"y": 1894,
+"g": "Symphonie",
+"u": "https://open.spotify.com/track/31MxZhQkKeSEXNRBzPos1n"
+},
+{
+"t": "Valse triste",
+"c": "Sibelius",
+"y": 1904,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/4Hr2Ijzjy3lXVtQWiS7O3L"
+},
+{
+"t": "Miserere mei, Deus",
+"c": "Allegri",
+"y": 1638,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/1yColXUkf6Dq4swYpsgJRQ"
+},
+{
+"t": "Summertime (Porgy and Bess)",
+"c": "Gershwin",
+"y": 1935,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/1NER6nw7tDYJvxYHjGFWNQ"
+},
+{
+"t": "Gloria in excelsis Deo (Gloria RV 589)",
+"c": "Vivaldi",
+"y": 1715,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/5Txwlv081K39njx353jh7r"
+},
+{
+"t": "Grande Valse brillante Es-Dur op. 18",
+"c": "Chopin",
+"y": 1833,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/7Fo7PmFuA11TCRwD2fOvtL"
+},
+{
+"t": "Suite bergamasque - Prélude",
+"c": "Debussy",
+"y": 1890,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/7qTsSysXLXeb26Eny2FSUr"
+},
+{
+"t": "One Summer's Day (Chihiro)",
+"c": "Joe Hisaishi",
+"y": 2001,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/0MuweuHQKWyu6GdgpRgAnN"
+},
+{
+"t": "Der Hölle Rache (Zauberflöte, Königin der Nacht)",
+"c": "Mozart",
+"y": 1791,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/2IRMCtPrxmJwpyfCF8WcJA"
+},
+{
+"t": "Largo al factotum (Barbier von Sevilla)",
+"c": "Rossini",
+"y": 1816,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/4U6jZREqjJE1444746hq4I"
+},
+{
+"t": "Jesus bleibet meine Freude (BWV 147)",
+"c": "Bach",
+"y": 1723,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/5NbzzXzwd7ZgH8SSzlc4Dm"
+},
+{
+"t": "Rêverie",
+"c": "Debussy",
+"y": 1890,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/16dK08KnMolT83HkhFqp1i"
+},
+{
+"t": "Liebestraum Nr. 3 As-Dur",
+"c": "Liszt",
+"y": 1850,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/2u9VGZmVz7Rm01SfDgzcfA"
+},
+{
+"t": "Nocturne b-Moll op. 9 Nr. 1",
+"c": "Chopin",
+"y": 1830,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/6mry9fDj4oTFudQAMRo1lV"
+},
+{
+"t": "Slawischer Tanz Nr. 8 g-Moll",
+"c": "Dvořák",
+"y": 1878,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/1e0Yj4wm4Bem5uk3wf0qlT"
+},
+{
+"t": "Nussknacker - Russischer Tanz (Trepak)",
+"c": "Tschaikowsky",
+"y": 1892,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/6dizSLXurP9SSOiiqVtxV0"
+},
+{
+"t": "Solveigs Lied (Peer Gynt)",
+"c": "Grieg",
+"y": 1875,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/3h6uTDTbwT39fU1W0zV7Pd"
+},
+{
+"t": "Carmen - Les Toréadors",
+"c": "Bizet",
+"y": 1875,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/4oUBEQJykZg3dEDZlaVxDA"
+},
+{
+"t": "Terpsichore – La Bourrée",
+"c": "Praetorius",
+"y": 1612,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/12u6g5SJgx3RDUtaji9fc6"
+},
+{
+"t": "Terpsichore – Gavotte",
+"c": "Praetorius",
+"y": 1612,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/3tCkwvtqGuSTD9mIqnkxPw"
+},
+{
+"t": "Terpsichore – Gaillarde",
+"c": "Caroubel",
+"y": 1612,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/46M2S5pOg2c2GkWTkbw65w"
+},
+{
+"t": "Terpsichore – Pavane de Spaigne",
+"c": "Caroubel",
+"y": 1612,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/3sacuoEtEYAlC8C1hWu2IO"
+},
+{
+"t": "Basse danse 'La Magdalena'",
+"c": "Attaingnant",
+"y": 1530,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/46Z2sONzIQVCNwWJaFrvbm"
+},
+{
+"t": "Tourdion",
+"c": "Attaingnant",
+"y": 1530,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/0WH6aGVm9dzdRIIZpOdSrG"
+},
+{
+"t": "Pavane",
+"c": "Attaingnant",
+"y": 1530,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/25ZhHyCaX7UGBlmEfaziUE"
+},
+{
+"t": "Bransle d'Écosse",
+"c": "Arbeau",
+"y": 1589,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/5LdaSGrgndJEdmL9nUfSOx"
+},
+{
+"t": "Branle Cassandre",
+"c": "Arbeau",
+"y": 1589,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/5vBFsqRjC5XNxTHXtrzGqQ"
+},
+{
+"t": "Jouyssance vous donneray",
+"c": "Arbeau",
+"y": 1589,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/3cuVjpwBYaQ279W7f3NL9Y"
+},
+{
+"t": "Ein ser guter Hoftantz",
+"c": "Neusidler",
+"y": 1536,
+"g": "Gitarre",
+"u": "https://open.spotify.com/track/1mbM8CkQVMzm9OGFPtskCx"
+},
+{
+"t": "Der Wäscherin Tanz",
+"c": "Neusidler",
+"y": 1536,
+"g": "Gitarre",
+"u": "https://open.spotify.com/track/5zBEauh8r5N1nroTKIBtdH"
+},
+{
+"t": "Ich klag den Tag",
+"c": "Neusidler",
+"y": 1536,
+"g": "Gitarre",
+"u": "https://open.spotify.com/track/049gPp3OlVx0So47oK2xn4"
+},
+{
+"t": "Allemande (Danserye)",
+"c": "Susato",
+"y": 1551,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/52RDjhKgVjb0aAT8HiVMg9"
+},
+{
+"t": "Ballo francese",
+"c": "Mainerio",
+"y": 1578,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/1hZ9YLkIYyecuBZg7FiQaI"
+},
+{
+"t": "Ce fut le jour",
+"c": "Chardavoine",
+"y": 1576,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/0xLySs5CGyzuLhPvHdDurR"
+},
+{
+"t": "Innsbruck, ich muss dich lassen",
+"c": "Isaac",
+"y": 1495,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/0zg3PwhUxTPVaCCzE4Po2R"
+},
+{
+"t": "Carmen in Fa",
+"c": "Isaac",
+"y": 1501,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/4aeFVDQCZdJPZxrWnLEDoW"
+},
+{
+"t": "Quis dabit capiti meo aquam (Lamentatio)",
+"c": "Isaac",
+"y": 1492,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/4EaAn6VXy9uLPfzOcNUerM"
+},
+{
+"t": "Alla battaglia",
+"c": "Isaac",
+"y": 1488,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/2EheHaXcUfM97ul2MTW2ZC"
+},
+{
+"t": "Mistresse Nichols Almand",
+"c": "Dowland",
+"y": 1600,
+"g": "Gitarre",
+"u": "https://open.spotify.com/track/71U9tzd8JsWLk7HoCV1ICy"
+},
+{
+"t": "The Shoemaker's Wife (A Toy)",
+"c": "Dowland",
+"y": 1600,
+"g": "Gitarre",
+"u": "https://open.spotify.com/track/2k2Hky9hJbd6E0F1no47sG"
+},
+{
+"t": "The Frog Galliard",
+"c": "Dowland",
+"y": 1600,
+"g": "Gitarre",
+"u": "https://open.spotify.com/track/3vAlgcCLgVr6VpYzIdwffA"
+},
+{
+"t": "Aus tiefer Not schrei ich zu dir",
+"c": "Walther",
+"y": 1712,
+"g": "Orgel",
+"u": "https://open.spotify.com/track/59vBRzgCv9iqwmg5ZKx3r6"
+},
+{
+"t": "Erzürne dich nicht (Psalm 37)",
+"c": "Stoltzer",
+"y": 1526,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/36eK75Hrv5NZ194r8GefQ8"
+},
+{
+"t": "Entlaubet ist der Walde",
+"c": "Stoltzer",
+"y": 1520,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/5Pm3O0ZLGW1K7mjAcmpWVA"
+},
+{
+"t": "Requiem (Missa pro defunctis)",
+"c": "Obrecht",
+"y": 1500,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/0b6JekIg7zCg4fL1KIMwom"
+},
+{
+"t": "Missa Fortuna desperata – Osanna",
+"c": "Obrecht",
+"y": 1496,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/1D3jBdVg9vAKp54LzCYbis"
+},
+{
+"t": "Jamais, jamais, jamais",
+"c": "Mouton",
+"y": 1510,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/4ByOOksgID9SPVPrXHuklk"
+},
+{
+"t": "Messe de Nostre Dame – Kyrie",
+"c": "Machaut",
+"y": 1360,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/6LOSug91saikogFZXKfEme"
+},
+{
+"t": "Douce dame jolie",
+"c": "Machaut",
+"y": 1350,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/2T3ZCmTGWVqSaDLPKQEKyO"
+},
+{
+"t": "Ma fin est mon commencement",
+"c": "Machaut",
+"y": 1360,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/3BOcMEyOY6VgsYRgwW7i1Q"
+},
+{
+"t": "Messe de Nostre Dame – Agnus Dei",
+"c": "Machaut",
+"y": 1360,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/3AJ4cIXFV7esfGQ3xTtpqN"
+},
+{
+"t": "Rose, liz, printemps, verdure",
+"c": "Machaut",
+"y": 1350,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/50HnYaj5auCwRATXYgtCpe"
+},
+{
+"t": "Puis qu'en oubli sui de vous",
+"c": "Machaut",
+"y": 1360,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/36S3R6uowjRPelZjh9jysk"
+},
+{
+"t": "Hoquetus David",
+"c": "Machaut",
+"y": 1364,
+"g": "Kammermusik",
+"u": "https://open.spotify.com/track/2v1pJ704uKyldMAVckT9tm"
+},
+{
+"t": "Moro, lasso, al mio duolo (Madrigale Buch 6)",
+"c": "Gesualdo",
+"y": 1611,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/1SUoTUkv6fdkp3suVMJq5x"
+},
+{
+"t": "Io parto e non più dissi (Buch 6)",
+"c": "Gesualdo",
+"y": 1611,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/2O9xvb7fMcWzCpCycTrfzJ"
+},
+{
+"t": "Beltà, poi che t'assenti (Buch 6)",
+"c": "Gesualdo",
+"y": 1611,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/3AIQR4L5q8OCjPC9E0pUEv"
+},
+{
+"t": "O vos omnes (Tenebrae Responsorien)",
+"c": "Gesualdo",
+"y": 1611,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/7JmCIIdspvW6H7FggVzPb9"
+},
+{
+"t": "Tristis est anima mea (Tenebrae)",
+"c": "Gesualdo",
+"y": 1611,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/4P8V3vCiUiL6DVSH6ggk8a"
+},
+{
+"t": "Luci serene e chiare (Buch 4)",
+"c": "Gesualdo",
+"y": 1596,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/3xNEGVT1j0YyAkE3tRSbj6"
+},
+{
+"t": "Dolcissima mia vita (Buch 5)",
+"c": "Gesualdo",
+"y": 1611,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/6SvUMxsNOZS2PTK88Yncnf"
+},
+{
+"t": "L'Orfeo – Toccata",
+"c": "Monteverdi",
+"y": 1607,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/3bsGu9uiwqybcfXD4zKYmf"
+},
+{
+"t": "Marienvesper – Dixit Dominus",
+"c": "Monteverdi",
+"y": 1610,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/4dFFrdxGbbq6GQeVB2nTPw"
+},
+{
+"t": "Lamento d'Arianna (Lasciatemi morire)",
+"c": "Monteverdi",
+"y": 1608,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/3WcomUseVZ2XRddmCPbCkO"
+},
+{
+"t": "Zefiro torna",
+"c": "Monteverdi",
+"y": 1632,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/5EiksbNmMRoPJSWPlS55bT"
+},
+{
+"t": "Il combattimento di Tancredi e Clorinda",
+"c": "Monteverdi",
+"y": 1624,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/1WXh8GrdnD9czdw72WhReg"
+},
+{
+"t": "L'incoronazione di Poppea – Pur ti miro",
+"c": "Monteverdi",
+"y": 1643,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/5NinL2jNwjeRpHwTFeRSv9"
+},
+{
+"t": "Cruda Amarilli (Madrigale Buch 5)",
+"c": "Monteverdi",
+"y": 1605,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/5ZW9T5SVMYo8t2W9kni1tp"
+},
+{
+"t": "Jauchzet dem Herren, alle Welt (Psalm 100)",
+"c": "Schütz",
+"y": 1619,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/16FLk34YVxwuPdQ4EJTSkv"
+},
+{
+"t": "O bone, o dulcis, o benigne Jesu (Cantiones Sacrae)",
+"c": "Schütz",
+"y": 1625,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/4AxzSKlzbVbWBEk2rjW1E7"
+},
+{
+"t": "Musikalische Exequien – Herr, wenn ich nur dich habe",
+"c": "Schütz",
+"y": 1636,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/40h8f9xmXFzpjboCFJ4EFf"
+},
+{
+"t": "Also hat Gott die Welt geliebt (Geistliche Chormusik)",
+"c": "Schütz",
+"y": 1648,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/0MyhLE7VWqoZrmTfCvaaVV"
+},
+{
+"t": "Selig sind die Toten (Geistliche Chormusik)",
+"c": "Schütz",
+"y": 1648,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/60ZPlN64jBNf1O1U16g83W"
+},
+{
+"t": "Saul, Saul, was verfolgst du mich (Symphoniae Sacrae III)",
+"c": "Schütz",
+"y": 1650,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/78TiBuSicJKdPWTjBmqYbA"
+},
+{
+"t": "Weihnachtshistorie",
+"c": "Schütz",
+"y": 1660,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/547WY6yaTPHiQugzTMU944"
+},
+{
+"t": "Membra Jesu Nostri – Ad ubera portabimini",
+"c": "Buxtehude",
+"y": 1680,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/7qpq6iJ4ikHTWmHI6kuRdS"
+},
+{
+"t": "Toccata F-Dur BuxWV 156",
+"c": "Buxtehude",
+"y": 1683,
+"g": "Orgel",
+"u": "https://open.spotify.com/track/5b0zOyPlUvVqo9RKvf0QIX"
+},
+{
+"t": "Passacaglia d-Moll BuxWV 161",
+"c": "Buxtehude",
+"y": 1684,
+"g": "Orgel",
+"u": "https://open.spotify.com/track/0JfugWHTPWAIYefSHJZhxp"
+},
+{
+"t": "Praeludium g-Moll BuxWV 149",
+"c": "Buxtehude",
+"y": 1685,
+"g": "Orgel",
+"u": "https://open.spotify.com/track/6ZlvAfPPeNOORiq7EvyoYl"
+},
+{
+"t": "Ciacona e-Moll BuxWV 160",
+"c": "Buxtehude",
+"y": 1686,
+"g": "Orgel",
+"u": "https://open.spotify.com/track/53LtMr9RxsPalVhhJuc4Uo"
+},
+{
+"t": "Praeludium e-Moll BuxWV 143",
+"c": "Buxtehude",
+"y": 1688,
+"g": "Orgel",
+"u": "https://open.spotify.com/track/256cAHyo9jnoFEFwKDkSqB"
+},
+{
+"t": "Praeludium C-Dur BuxWV 138",
+"c": "Buxtehude",
+"y": 1690,
+"g": "Orgel",
+"u": "https://open.spotify.com/track/0zkebO2yMObgsR4U3wyvKl"
+},
+{
+"t": "Tannhäuser – Ouvertüre",
+"c": "Wagner",
+"y": 1845,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/5ruGgyGrqInlwSJpEpC9oJ"
+},
+{
+"t": "Lohengrin – Treulich geführt (Brautchor)",
+"c": "Wagner",
+"y": 1850,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/1FitymoxWIlGYUa3HruVzK"
+},
+{
+"t": "Die Meistersinger von Nürnberg – Vorspiel",
+"c": "Wagner",
+"y": 1868,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/2AdrGrbK1zisq3lAgpLVO7"
+},
+{
+"t": "Siegfried-Idyll",
+"c": "Wagner",
+"y": 1870,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/7KzDJlvqcwpv5C0n8sbkKz"
+},
+{
+"t": "Der fliegende Holländer – Ouvertüre",
+"c": "Wagner",
+"y": 1843,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/1XIusBHgEQ1XU7cP0vSlyu"
+},
+{
+"t": "La Bohème – Che gelida manina",
+"c": "Puccini",
+"y": 1896,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/0TeMe9q0MwYPTvYvhjTlUw"
+},
+{
+"t": "La Bohème – Sì, mi chiamano Mimì",
+"c": "Puccini",
+"y": 1896,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/1YT1SmwIfoIk0BYX0SMKp0"
+},
+{
+"t": "Tosca – E lucevan le stelle",
+"c": "Puccini",
+"y": 1900,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/4vDodVdvTxkl77EitvEzCP"
+},
+{
+"t": "Tosca – Vissi d'arte",
+"c": "Puccini",
+"y": 1900,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/3Cry7dR7x1o9pVj0mABbKs"
+},
+{
+"t": "Madama Butterfly – Un bel dì vedremo",
+"c": "Puccini",
+"y": 1904,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/3hpJpleLIWeUSYGcbbTQuj"
+},
+{
+"t": "La Traviata – Brindisi 'Libiamo ne' lieti calici'",
+"c": "Verdi",
+"y": 1853,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/5qbug90TS9RaY01GhRsuh3"
+},
+{
+"t": "Il Trovatore – Coro di zingari (Anvil Chorus)",
+"c": "Verdi",
+"y": 1853,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/0jDYmdqoqoZ7bTkHrlE7GT"
+},
+{
+"t": "Aida – Celeste Aida",
+"c": "Verdi",
+"y": 1871,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/0aQiqmn0V5CZqQM7fFToha"
+},
+{
+"t": "La forza del destino – Ouvertüre",
+"c": "Verdi",
+"y": 1862,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/6592Tp9Q88mkP7QqFRn7SV"
+},
+{
+"t": "Carmen – Toreador-Lied (Votre toast)",
+"c": "Bizet",
+"y": 1875,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/2lGThJ9GK9ugarKkVAN58b"
+},
+{
+"t": "L'Arlésienne – Farandole",
+"c": "Bizet",
+"y": 1872,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/4EOvzzJp0Z7VVmdKocioHd"
+},
+{
+"t": "Les pêcheurs de perles – Au fond du temple saint",
+"c": "Bizet",
+"y": 1863,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/6N2QRUQhIVqE9deWQxCniK"
+},
+{
+"t": "Les Contes d'Hoffmann – Barcarolle (Belle nuit)",
+"c": "Offenbach",
+"y": 1881,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/4gdI4bwrVzzquvgXQGFS0M"
+},
+{
+"t": "Orphée aux enfers – Ouvertüre",
+"c": "Offenbach",
+"y": 1858,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/1pmwBK946KTPe7ZGLSVsK4"
+},
+{
+"t": "Les Contes d'Hoffmann – Les oiseaux dans la charmille (Olympia)",
+"c": "Offenbach",
+"y": 1881,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/3yzAU86O09fpqmWGZditIh"
+},
+{
+"t": "La belle Hélène – Ouvertüre",
+"c": "Offenbach",
+"y": 1864,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/6gNzBIXlHhCihCyAVcF6Ys"
+},
+{
+"t": "Aufforderung zum Tanz",
+"c": "Weber",
+"y": 1819,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/3zEX5F9lwUXByhDMmxeTSS"
+},
+{
+"t": "Klarinettenkonzert Nr. 1 f-Moll (1. Satz)",
+"c": "Weber",
+"y": 1811,
+"g": "Konzert (andere)",
+"u": "https://open.spotify.com/track/4a18qBwCldSTtjaEexvZ0E"
+},
+{
+"t": "Chowanschtschina – Vorspiel (Morgendämmerung an der Moskwa)",
+"c": "Mussorgski",
+"y": 1880,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/7s11bZf1GG1uUx7ORjoNuv"
+},
+{
+"t": "Bilder einer Ausstellung – Promenade",
+"c": "Mussorgski",
+"y": 1874,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/42nndRq8CKplU31Y1cy9XD"
+},
+{
+"t": "Boris Godunow – Krönungsszene",
+"c": "Mussorgski",
+"y": 1874,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/0IB0eihSVsNlRXfd5PL1dS"
+},
+{
+"t": "Bilder einer Ausstellung – Baba Yaga (Die Hütte auf Hühnerfüßen)",
+"c": "Mussorgski",
+"y": 1874,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/06ctlGrqj7zECdvj4BTtl9"
+},
+{
+"t": "Bilder einer Ausstellung – Ballett der Küchlein",
+"c": "Mussorgski",
+"y": 1874,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/6LoYfAW63VAVBmWhATmRAj"
+},
+{
+"t": "Capriccio espagnol – Fandango asturiano",
+"c": "Rimski-Korsakow",
+"y": 1887,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/2DDguShZzJuWT7hFAIvtZF"
+},
+{
+"t": "Russische Ostern (Ouvertüre)",
+"c": "Rimski-Korsakow",
+"y": 1888,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/292arMQVF9yCJyT2KnP7Nf"
+},
+{
+"t": "Sadko – Lied des indischen Gastes",
+"c": "Rimski-Korsakow",
+"y": 1898,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/0TqJLLJYQzNmnZxgU3rPPn"
+},
+{
+"t": "Der goldene Hahn – Hymne an die Sonne",
+"c": "Rimski-Korsakow",
+"y": 1907,
+"g": "Gesang",
+"u": "https://open.spotify.com/track/7Aw8DbUn86tx4iE2HyqqM0"
+},
+{
+"t": "Scheherazade – 3. Satz (Der junge Prinz und die Prinzessin)",
+"c": "Rimski-Korsakow",
+"y": 1888,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/1m5DuOA12D6x93n1qVzSLr"
+},
+{
+"t": "Polowetzer Tänze (Fürst Igor)",
+"c": "Borodin",
+"y": 1890,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/5lscZDnhpHMTGhdrAh5QNi"
+},
+{
+"t": "In den Steppen Zentralasiens",
+"c": "Borodin",
+"y": 1880,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/6P0gFuzaVs88JyatIn6KKJ"
+},
+{
+"t": "Streichquartett Nr. 2 – Scherzo",
+"c": "Borodin",
+"y": 1881,
+"g": "Streichquartett",
+"u": "https://open.spotify.com/track/0VtfdOiavFrclA9U3e7vPz"
+},
+{
+"t": "Symphonie Nr. 2 h-Moll – 1. Satz",
+"c": "Borodin",
+"y": 1876,
+"g": "Symphonie",
+"u": "https://open.spotify.com/track/2NcfDeLt1wgQXkyouWfyhi"
+},
+{
+"t": "Le Poème de l'extase op. 54",
+"c": "Skrjabin",
+"y": 1908,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/0vbiZVx7qRmkbaeV658fYY"
+},
+{
+"t": "Vers la flamme op. 72",
+"c": "Skrjabin",
+"y": 1914,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/1KNDO0UjXWKuM6KjtBNnlW"
+},
+{
+"t": "Nocturne für die linke Hand op. 9 Nr. 2",
+"c": "Skrjabin",
+"y": 1894,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/6K9a9PGmH14VGZTl3miBFJ"
+},
+{
+"t": "Klaviersonate Nr. 5 op. 53",
+"c": "Skrjabin",
+"y": 1907,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/1pqOAp7RSip0x84YGcDFeU"
+},
+{
+"t": "Étude op. 42 Nr. 5 cis-Moll",
+"c": "Skrjabin",
+"y": 1903,
+"g": "Klavier solo",
+"u": "https://open.spotify.com/track/2PzUXnFcYIUr643Vu1nXOl"
+},
+{
+"t": "Ruslan und Ludmila – Ouvertüre",
+"c": "Glinka",
+"y": 1842,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/70NjTTCNOmXyq7k86439Mn"
+},
+{
+"t": "Kamarinskaya",
+"c": "Glinka",
+"y": 1848,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/08wlphxQmB5b6I4tOLwgJ1"
+},
+{
+"t": "Walzer-Fantasie",
+"c": "Glinka",
+"y": 1856,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/7kN5xUUAHHTeD2FTdhBWaI"
+},
+{
+"t": "Jota Aragonesa (Spanische Ouvertüre Nr. 1)",
+"c": "Glinka",
+"y": 1845,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/6ERilWOQfVQcim1mTgRl4c"
+},
+{
+"t": "Ein Leben für den Zaren – Ouvertüre",
+"c": "Glinka",
+"y": 1836,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/4JNEEC38kZfC8wHKEWezIC"
+},
+{
+"t": "Tamara (Sinfonische Dichtung)",
+"c": "Balakirew",
+"y": 1882,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/5Nk6smX2sdvmLKfr0ftL48"
+},
+{
+"t": "Symphonie Nr. 1 C-Dur – Scherzo",
+"c": "Balakirew",
+"y": 1897,
+"g": "Symphonie",
+"u": "https://open.spotify.com/track/0wr4J2gzaikjdOBASPPHTw"
+},
+{
+"t": "Ouvertüre über drei russische Lieder",
+"c": "Balakirew",
+"y": 1858,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/4ylv3oJEJWBl928TSLjvat"
+},
+{
+"t": "Die verkaufte Braut – Ouvertüre",
+"c": "Smetana",
+"y": 1866,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/26d6NJOihv4XhkphDZaaf0"
+},
+{
+"t": "Die verkaufte Braut – Tanz der Komödianten",
+"c": "Smetana",
+"y": 1866,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/1EQ0aGxiFBHEjOTUGPKI2a"
+},
+{
+"t": "Má vlast – Vyšehrad",
+"c": "Smetana",
+"y": 1874,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/0TFEXj4bY0bmFYYfdP0OLA"
+},
+{
+"t": "Má vlast – Šárka",
+"c": "Smetana",
+"y": 1875,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/4kF7c2YLF7OyjIsM78Akkf"
+},
+{
+"t": "Má vlast – Aus Böhmens Hain und Flur",
+"c": "Smetana",
+"y": 1875,
+"g": "Orchester",
+"u": "https://open.spotify.com/track/35fulGuxwc4XHj7M3nwAfK"
+}
 ]
